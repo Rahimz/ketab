@@ -4,8 +4,13 @@ from .models import Book
 
 
 def home(request):
-    books = Book.objects.all()
     return render(request,
                   'books/home.html',
+                  {})
+
+def booklist(request):
+    books = Book.objects.all()
+    return render(request,
+                  'books/books_list.html',
                   {'books': books})
 
