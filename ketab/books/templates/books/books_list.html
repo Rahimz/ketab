@@ -7,7 +7,7 @@
     <p>Hello book man</p>
     <ul>
     {% for book in books %}
-        <li>{{ book }}</li>        
+        <li><a href="{{ book.get_absolute_url }}">{{ book }}</a></li>        
     {% endfor %}
     </ul>
     
