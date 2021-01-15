@@ -9,6 +9,9 @@ class Book(models.Model):
                             allow_unicode=True)
 
     
+    class Meta:
+        ordering = ['name']
+    
     def __str__(self):
         return self.name
         
