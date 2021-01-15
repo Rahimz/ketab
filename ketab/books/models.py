@@ -25,10 +25,17 @@ class Author(models.Model):
                             verbose_name='Name')
     books = models.ManyToManyField(Book,
                                    )
-    
-    
+        
     class Meta:
         ordering = ['name']
     
     def __str__(self):
         return self.name
+  
+  
+class Critique(models.Model): 
+    author = models.CharField(max_length=1500,)
+    content = models.TextField()
+    book = models.ForeignKey(Book,
+                            on_delete=models.CASCADE,
+                            )
