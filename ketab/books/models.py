@@ -39,3 +39,7 @@ class Critique(models.Model):
     book = models.ForeignKey(Book,
                             on_delete=models.CASCADE,
                             related_name='critique')
+    
+    
+    def __str__(self):
+        return self.author + self.book

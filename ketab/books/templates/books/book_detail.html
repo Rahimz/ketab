@@ -7,5 +7,15 @@
     <p>Name: {{ book.name }}</p>
     <p>Code: {{ book.id }}</p>
     <p>Author:  {% for author in authors %} <span style="padding:10px;">{{ author }}</span> {% endfor %}</p>
+    {% if critiques %}
+        <hr />
+        <h3>Critiques</h3>
+        {% for critique in critiques %}
+        <p>{{ critique.author }}:</p>
+         {# TODO:: the content should format to render as multilines text or markdown format #}
+        <p style="padding:10px;">{{ critique.content|safe }}</p>
+        {% endfor %}
+    
+    {% endif %}
         
 {% endblock %}
