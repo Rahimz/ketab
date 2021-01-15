@@ -6,6 +6,6 @@
  
     <p>Name: {{ book.name }}</p>
     <p>Code: {{ book.id }}</p>
-    <p>Author:  </p>
+    <p>Author:  {% for author in authors %} <span style="padding:10px;">{{ author }}</span> {% endfor %}</p>
         
 {% endblock %}

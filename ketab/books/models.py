@@ -20,7 +20,8 @@ class Book(models.Model):
 class Author(models.Model):
     name = models.CharField(max_length=1500,
                             verbose_name='Name')
-    books = models.ManyToManyField(Book)
+    books = models.ManyToManyField(Book,
+                                   )
     
     
     class Meta:
