@@ -38,4 +38,4 @@ class Critique(models.Model):
     content = models.TextField()
     book = models.ForeignKey(Book,
                             on_delete=models.CASCADE,
-                            )
+                            related_name='critique')
