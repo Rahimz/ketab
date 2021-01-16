@@ -1,5 +1,5 @@
 from django.contrib import admin
-from.models import Book, Author, Critique
+from.models import Book, Author, Critique, Collection
 
 
 class AutorshipInline(admin.TabularInline):
@@ -25,3 +25,8 @@ class AuthorAdmin(admin.ModelAdmin):
 class CritiqueAdmin(admin.ModelAdmin):
     list_display = ['author', 'book']
     
+
+@admin.register(Collection)
+class CollectionAdmin(admin.ModelAdmin):
+    list_display = ['name', 'item_quantity']
+    # TODO:: this dkango admin should present a list of books in this collection
