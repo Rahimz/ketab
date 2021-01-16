@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %} Collection: {{ collection.name }} {% endblock %} 
+
+{% block body %}
+ 
+    <p>Name: {{ collection.name }}</p>
+    <p>Code: {{ collection.item_quantity }}</p>
+    <p>Books:  {% for book in books %} <a style="padding:10px;" href="{{ book.get_absolute_url }}">{{ book }}</a> {% endfor %}</p>
+    
+        
+{% endblock %}

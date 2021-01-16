@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
-from .models import Book, Author, Critique
+from .models import Book, Author, Critique, Collection
 
 
 def home(request):
@@ -24,3 +24,21 @@ def bookdetail(request, pk):
                   {'book': book,
                    'authors': authors,
                    'critiques': critiques,})
+
+
+def collectionlist(request):
+    collections = Collection.objects.all()
+    return render(request,
+                  'books/collections_list.html',
+                  {'collections': collections})
+
+  
+def collectiondetail(request, pk):
+    collection = get_object_or_404(Collection,
+                                   pk=pk)
+    books = Book.objects.filter(collection=collection)
+    return render(request,
+                  'books/collection_detail.html',
+                  {'collection': collection,
+                   'books': books})
+

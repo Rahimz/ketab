@@ -7,6 +7,13 @@ class Collection(models.Model):
     item_quantity = models.IntegerField()
     
     
+    class Meta:
+        ordering = ['name']
+    
+    def get_absolute_url(self):
+        return reverse('collectiondetail', args=[self.pk])
+        
+    
     def __str__(self):
         return self.name
 
