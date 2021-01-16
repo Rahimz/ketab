@@ -11,14 +11,15 @@
 </style>
 </head>
 
-<header>
-    <h2> {% block title %}{% endblock %} </h2>
+<header>    
     <ul>
+        <h2 class="nav-link" >Ketabkhone</a></h2>
         <li class="nav-link" ><a href="{% url 'home' %}">Home</a></li>
         <li class="nav-link"><a href="{% url 'booklist' %}">Books</a></li>
         <li class="nav-link"><a href="{% url 'collectionlist' %}">Collections</a></li>
     </ul>
-    <hr />
+        <hr />
+    <h2> {% block title %}{% endblock %} </h2>
 </header>
 
 <body>
