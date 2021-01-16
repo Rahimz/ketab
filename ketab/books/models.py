@@ -42,4 +42,4 @@ class Critique(models.Model):
     
     
     def __str__(self):
-        return self.author + self.book
+        return " : ".join([self.author, self.book.name])
