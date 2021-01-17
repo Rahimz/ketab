@@ -6,8 +6,9 @@
  
     <p>Name: {{ book.name }}</p>
     <p>Code: {{ book.id }}</p>
-    {% if book.collection %}
-        <P>Collection: {{ book.collection }}</p>
+    {% if collection %}
+        {% with collection|first as co %}
+        <P>Collection: <a href="{{ co.get_absolute_url }}">{{ co.name }}</a></p>{% endwith %}
     {% endif %}
     <p>Author:  {% for author in authors %} <span style="padding:10px;">{{ author }}</span> {% endfor %}</p>
     {% if critiques %}

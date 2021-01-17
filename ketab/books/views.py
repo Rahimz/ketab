@@ -19,11 +19,14 @@ def bookdetail(request, pk):
                              pk=pk)
     authors = book.author_set.all()
     critiques = Critique.objects.filter(book=book)
+    collection = Collection.objects.filter(name=book.collection)
+                                       
     return render(request,
                   'books/book_detail.html',
                   {'book': book,
                    'authors': authors,
-                   'critiques': critiques,})
+                   'critiques': critiques,
+                   'collection': collection})
 
 
 def collectionlist(request):
