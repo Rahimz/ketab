@@ -19,9 +19,9 @@
 				<img src="{{ profile.photo.url }}" class="user-avatar" alt="user avatar" />		
 			{% else %}
 				{% if request.user.profile.gender == "female" %}
-					<img src="{% static 'account/woman.svg' %}"  class="user-avatar" alt="woman sample pic" >
+					<img src="{% static 'sample_images/woman.svg' %}"  class="user-avatar" alt="woman sample pic" >
 				{% else %}												
-					<img src="{% static 'account/man.svg' %}"  class="user-avatar" alt="man sample pic">
+					<img src="{% static 'sample_images/man.svg' %}"  class="user-avatar" alt="man sample pic">
 				{% endif %}
 			{% endif %}
 			
