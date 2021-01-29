@@ -5,12 +5,16 @@
 {% block body %}
  
     <p>Name: {{ book.name }}</p>
-    <p>Code: {{ book.id }}</p>
+    <p>ISBN: {{ book.isbn }}</p>
     {% if collection %}
         {% with collection|first as co %}
         <P>Collection: <a href="{{ co.get_absolute_url }}">{{ co.name }}</a></p>{% endwith %}
     {% endif %}
-    <p>Author:  {% for author in authors %} <span style="padding:10px;">{{ author }}</span> {% endfor %}</p>
+    <p>Author:  <span style="padding:10px;">{{ book.author_1 }}</span></p>
+    <p>Illustrator:  <span style="padding:10px;">{{ book.illustrator_1 }}</span></p>
+    <p>Publisher:  <span style="padding:10px;">{{ book.publisher }}</span></p>
+    <p>Publishing Year:  <span style="padding:10px;">{{ book.ppub_year }}</span></p>
+
     {% if critiques %}
         <hr />
         <h3>Critiques</h3>

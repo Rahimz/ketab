@@ -17,14 +17,12 @@ def booklist(request):
 def bookdetail(request, pk):
     book = get_object_or_404(Book,
                              pk=pk)
-    authors = book.author_set.all()
     critiques = Critique.objects.filter(book=book)
     collection = Collection.objects.filter(name=book.collection)
                                        
     return render(request,
                   'books/book_detail.html',
                   {'book': book,
-                   'authors': authors,
                    'critiques': critiques,
                    'collection': collection})
 
