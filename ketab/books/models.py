@@ -159,3 +159,19 @@ class Critique(models.Model):
     
     def __str__(self):
         return " : ".join([self.author, self.book.name])
+
+
+class Market(models.Model):
+    isbn = models.ForeignKey(ISBN,
+                             related_name='market',
+                             on_delete=models.CASCADE)
+    available = models.BooleanField(default=False)
+    last_price = models.DecimalField(max_digits=10, decimal_places=2,
+                                     blank=True, null=True,)
+    # TODO:: year field should be automatic list
+    last_published_year = models.IntegerField(blank=True, null=True,)
+    last_circulation = models.IntegerField(blank=True, null=True,)
+    updated_date = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return str(self.isbn)

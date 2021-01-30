@@ -1,5 +1,7 @@
 from django.contrib import admin
-from.models import Book, Author, Critique, Collection, Illustrator, Publisher, Translator, ISBN
+from.models import Book, Author, Critique, Collection, \
+    Illustrator, Publisher, Translator, ISBN, \
+    Market
 
 
 # class AutorshipInline(admin.TabularInline):
@@ -50,3 +52,8 @@ class CritiqueAdmin(admin.ModelAdmin):
 class CollectionAdmin(admin.ModelAdmin):
     list_display = ['name', 'item_quantity']
     # TODO:: this django admin should present a list of books in this collection
+
+
+@admin.register(Market)
+class MarketAdmin(admin.ModelAdmin):
+    list_display = ['isbn', 'available']
