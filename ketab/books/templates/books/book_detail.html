@@ -1,29 +1,45 @@
 {% extends 'base.html' %}
 
-{% block title %} Book: {{ book.name }} {% endblock %} 
+{% block title %} Book: {{ book.name }} {% endblock %}
 
 {% block body %}
- 
-    <p>Name: {{ book.name }}</p>
-    <p>ISBN: {{ book.isbn }}</p>
-    {% if collection %}
-        {% with collection|first as co %}
-        <P>Collection: <a href="{{ co.get_absolute_url }}">{{ co.name }}</a></p>{% endwith %}
-    {% endif %}
-    <p>Author:  <span style="padding:10px;">{{ book.author_1 }}</span></p>
-    <p>Illustrator:  <span style="padding:10px;">{{ book.illustrator_1 }}</span></p>
-    <p>Publisher:  <span style="padding:10px;">{{ book.publisher }}</span></p>
-    <p>Publishing Year:  <span style="padding:10px;">{{ book.ppub_year }}</span></p>
 
-    {% if critiques %}
-        <hr />
-        <h3>Critiques</h3>
-        {% for critique in critiques %}
-        <p>{{ critique.author }}:</p>
-         {# TODO:: the content should format to render as multilines text or markdown format #}
-        <p style="padding:10px;">{{ critique.content|safe }}</p>
-        {% endfor %}
-    
-    {% endif %}
-        
+<p>Name: {{ book.name }}</p>
+<p>ISBN: {{ book.isbn }}</p>
+{% if collection %}
+{% with collection|first as co %}
+<P>Collection: <a href="{{ co.get_absolute_url }}">{{ co.name }}</a></p>{% endwith %}
+{% endif %}
+<p>Author: <span style="padding:10px;">{{ book.author_1 }}</span></p>
+<p>Illustrator: <span style="padding:10px;">{{ book.illustrator_1 }}</span></p>
+<p>Publisher: <span style="padding:10px;">{{ book.publisher }}</span></p>
+<p>Publishing Year: <span style="padding:10px;">{{ book.ppub_year }}</span></p>
+
+{% if critiques %}
+<hr/>
+<h3>Critiques</h3>
+{% for critique in critiques %}
+<p>{{ critique.author }}:</p>
+{# TODO:: the content should format to render as multilines text or markdown format #}
+<p style="padding:10px;">{{ critique.content|safe }}</p>
+{% endfor %}
+
+{% endif %}
+<div class="mt-3">
+    <button type="button" class="btn btn-outline-secondary" data-toggle="collapse" data-target="#market">Market Info.</button>
+
+    <div id="market" class="collapse">
+        {% if market %}
+        <p>Available: {% if market.available %}Yes{% else %}No{% endif %}</p>
+        <p>Last Price:{{ market.price }}</p>
+        <p>Last Published Year: {{ market.last_published_year }}</p>
+        <p>Last Circulation: {{ market.last_circulation }}</p>
+        <p>Updated: {{ market.updated_date }}</p>
+        {% else %}
+        <p>There is no market info!</p>
+        {% endif %}
+    </div>
+
+
+</div>
 {% endblock %}
