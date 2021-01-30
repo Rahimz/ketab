@@ -69,10 +69,9 @@ class Book(models.Model):
     slug = models.SlugField(unique=True,
                             verbose_name='Slug',
                             allow_unicode=True)
-    isbn = models.ForeignKey(ISBN,
-                             related_name='isbn',
-                             on_delete=models.CASCADE,
-                             blank=True, null=True,)
+    isbn = models.OneToOneField(ISBN,
+                                related_name='isbn',
+                                on_delete=models.CASCADE,)
 
     author_1 = models.ForeignKey(Author,
                                  related_name='author_1',
@@ -162,9 +161,11 @@ class Critique(models.Model):
 
 
 class Market(models.Model):
-    isbn = models.ForeignKey(ISBN,
-                             related_name='market',
-                             on_delete=models.CASCADE)
+    # The market situation has a One to One relation with ISBN which is mean
+    # we could not have two or more market situation for a unique ISBN
+    isbn = models.OneToOneField(ISBN,
+                                related_name='market',
+                                on_delete=models.CASCADE)
     available = models.BooleanField(default=False)
     last_price = models.DecimalField(max_digits=10, decimal_places=2,
                                      blank=True, null=True,)
