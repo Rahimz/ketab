@@ -63,6 +63,18 @@ class Collection(models.Model):
         return self.name
 
 
+class Prize(models.Model):
+    name = models.CharField(max_length=1500,
+                            unique=True,)
+    latin_name = models.CharField(max_length=1500,
+                                  blank=True, null=True)
+    organisation = models.CharField(max_length=1500,
+                                    blank=True, null=True)
+
+    def __str__(self):
+        return self.name
+
+
 class Book(models.Model):
     name = models.CharField(max_length=1500,
                             verbose_name='Name')
