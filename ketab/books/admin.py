@@ -1,5 +1,5 @@
 from django.contrib import admin
-from.models import Book, Author, Critique, Collection, Illustrator, Publisher, Translator
+from.models import Book, Author, Critique, Collection, Illustrator, Publisher, Translator, ISBN
 
 
 # class AutorshipInline(admin.TabularInline):
@@ -12,10 +12,14 @@ from.models import Book, Author, Critique, Collection, Illustrator, Publisher, T
 
 @admin.register(Book)
 class BookAdmin(admin.ModelAdmin):
-    list_display = ['name']
+    list_display = ['name', 'author_1', 'isbn', 'publisher']
     prepopulated_fields = {'slug': ('name',)}
 
-    
+
+@admin.register(ISBN)
+class ISBNAdmin(admin.ModelAdmin):
+    list_display = ['code']
+
 
 @admin.register(Author)
 class AuthorAdmin(admin.ModelAdmin):

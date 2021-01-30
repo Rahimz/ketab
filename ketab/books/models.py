@@ -2,6 +2,13 @@ from django.db import models
 from django.urls import reverse 
 
 
+class ISBN(models.Model):
+    code = models.IntegerField(unique=True)
+
+    def __str__(self):
+        return str(self.code)
+
+
 class Author(models.Model):
     name = models.CharField(max_length=1500,)
 
@@ -62,7 +69,10 @@ class Book(models.Model):
     slug = models.SlugField(unique=True,
                             verbose_name='Slug',
                             allow_unicode=True)
-    isbn = models.IntegerField(blank=True, null=True,)
+    isbn = models.ForeignKey(ISBN,
+                             related_name='isbn',
+                             on_delete=models.CASCADE,
+                             blank=True, null=True,)
 
     author_1 = models.ForeignKey(Author,
                                  related_name='author_1',
