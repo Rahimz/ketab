@@ -188,3 +188,82 @@ class Market(models.Model):
 
     def __str__(self):
         return str(self.isbn)
+
+
+class BookGroup(models.Model):
+    name = models.CharField(max_length=1000)
+
+    def __str__(self):
+        return self.name
+
+
+class Shoora(models.Model):
+    """
+    This Shoora class is used to grab the data that CBC is created for each book.
+    """
+    isbn = models.OneToOneField(ISBN,
+                                related_name='shoora',
+                                on_delete=models.CASCADE)
+    book_group = models.ForeignKey(BookGroup,
+                                   related_name='book_group',
+                                   on_delete=models.CASCADE)
+    subject = models.CharField(max_length=1000, blank=True, null='True')
+    category = models.CharField(max_length=1000, blank=True, null='True')
+    function = models.CharField(max_length=1000, blank=True, null='True')
+    property = models.CharField(max_length=1000, blank=True, null='True')
+    satiric = models.BooleanField(default=False)
+    main_character = models.CharField(max_length=200,
+                                      choices=[('human', 'Human'),
+                                               ('animal', 'Animal'),
+                                               ('other', 'Other')],
+                                      default='human')
+    main_character_description = models.TextField(blank=True, null=True)
+    pov = models.CharField(max_length=1500,
+                           blank=True, null=True,
+                           verbose_name='Point of view')
+    events_place = models.CharField(max_length=1500,
+                           blank=True, null=True,)
+    child_special_need = models.CharField(max_length=1500,
+                                          blank=True, null=True)
+    genre = models.CharField(max_length=1000,
+                             blank=True, null=True)
+    genre_descriptive = models.CharField(max_length=2500,
+                                         blank=True, null=True)
+
+    age_from = models.IntegerField(blank=True, null=True)
+    age_to = models.IntegerField(blank=True, null=True)
+
+    position = models.CharField(max_length=1500,
+                                blank=True, null=True)
+
+    book_latin_name = models.CharField(max_length=1500, blank=True, null=True)
+    author_latin_name = models.CharField(max_length=1500, blank=True, null=True)
+    language = models.CharField(max_length=1500,
+                                blank=True, null=True)
+    nationality = models.CharField(max_length=1500,
+                                   blank=True, null=True)
+
+    # TODO:: final score comes from every content reviews
+    score = models.IntegerField(blank=True, null=True)
+
+    # TODO::other translation should be added
+    other_translation = models.BooleanField(default=False)
+
+    copyright = models.BooleanField(default=False)
+
+    created_date = models.DateTimeField(auto_now_add=True, )
+
+    def __str__(self):
+        return self.isbn
+
+
+class Content(models.Model):
+    author = models.CharField(max_length=500,)
+    description = models.TextField()
+    book = models.ForeignKey(Shoora,
+                             on_delete=models.CASCADE,
+                             related_name='content')
+    created_date = models.DateTimeField(auto_now_add=True,)
+
+    def __str__(self):
+        return self.author + ' - ' + str( self.book)
