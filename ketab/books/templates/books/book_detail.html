@@ -27,9 +27,11 @@
 {% endif %}
 <div class="mt-3">
     <button type="button" class="btn btn-outline-secondary" data-toggle="collapse" data-target="#market">Market Info.</button>
+    <button type="button" class="btn btn-outline-secondary" data-toggle="collapse" data-target="#shoora">Shoora Info.</button>
 
     <div id="market" class="collapse">
         {% if market %}
+         <h3>Market info</h3>
         <p>Available: {% if market.available %}Yes{% else %}No{% endif %}</p>
         <p>Last Price:{{ market.price }}</p>
         <p>Last Published Year: {{ market.last_published_year }}</p>
@@ -37,6 +39,38 @@
         <p>Updated: {{ market.updated_date }}</p>
         {% else %}
         <p>There is no market info!</p>
+        {% endif %}
+    </div>
+
+
+    <div id="shoora" class="collapse">
+        {% if shoora %}
+        <hr />
+        <h3>Shoora info</h3>
+        <p>Book group: {{ shoora.book_group }}</p>
+        <p>Subject:{{ shoora.subject }}</p>
+        <p>Category: {{ shoora.category }}</p>
+        <p>Sriric: {{ shoora.satiric }}</p>
+        <p>Main character: {{ shoora.main_character }}</p>
+        <p>Main character description: {{ shoora.main_character_description }}</p>
+        <p>Point of View: {{ shoora.pov }}</p>
+        <p>Events_place: {{ shoora.events_place }}</p>
+        <p>Child special need: {{ shoora.child_special_need }}</p>
+        <p>Genre: {{ shoora.genre }}</p>
+        <p>Genre Description: {{ shoora.genre_description }}</p>
+        <p>Age Range: {{ shoora.age_from }} to {{ shoora.age_to }}</p>
+        <p>Position: {{ shoora.position }}</p>
+        <p>Book latin name: {{ shoora.book_latin_name }}</p>
+        <p>Author latin name: {{ shoora.author_latin_name }}</p>
+        <p>Language: {{ shoora.language }}</p>
+        <p>Nationality: {{ shoora.nationality }}</p>
+        <p>Score: {{ shoora.score }}</p>
+        <p>Other translations: {{ shoora.other_translation }}</p>
+        <p>Cpoyright: {{ shoora.copyright }}</p>
+
+
+        {% else %}
+        <p>There is no shoora info!</p>
         {% endif %}
     </div>
 
