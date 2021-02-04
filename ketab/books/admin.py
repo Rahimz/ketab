@@ -1,7 +1,7 @@
 from django.contrib import admin
 from.models import Book, Author, Critique, Collection, \
     Illustrator, Publisher, Translator, ISBN, \
-    Market, Prize
+    Market, Prize, BookGroup, Shoora, Content
 
 
 # class AutorshipInline(admin.TabularInline):
@@ -62,3 +62,18 @@ class MarketAdmin(admin.ModelAdmin):
 @admin.register(Prize)
 class PrizeAdmin(admin.ModelAdmin):
     list_display = ['name', 'latin_name']
+
+
+@admin.register(BookGroup)
+class BookGroupAdmin(admin.ModelAdmin):
+    list_display = ['name', ]
+
+
+@admin.register(Shoora)
+class ShooraAdmin(admin.ModelAdmin):
+    list_display = ['isbn', ]
+
+
+@admin.register(Content)
+class ContentAdmin(admin.ModelAdmin):
+    list_display = ['author', 'book']
