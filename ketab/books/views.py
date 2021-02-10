@@ -26,8 +26,9 @@ def bookdetail(request, isbn):
         market = Market.objects.all().get(isbn=isbn)
         shoora = Shoora.objects.all().get(isbn=isbn)
     except Market.DoesNotExist:
-        market, shoora = None
-
+        market = None
+    except Shoora.DoesNotExist:
+        shoora = None
                                        
     return render(request,
                   'books/book_detail.html',
