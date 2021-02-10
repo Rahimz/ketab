@@ -42,7 +42,6 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
                     </li>
@@ -52,36 +51,67 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'collectionlist' %}">Collections</a>
                     </li>
+                    {# the staff part of navbar #}
+                    {% if  request.user.is_staff %}
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Forms
+                            ISBN
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Add Book</a></li>
+                            <li><a class="dropdown-item" href="{% url 'isbn_list' %}">ISBN List</a></li>
                             <li><a class="dropdown-item" href="{% url 'isbn-create' %}">Add ISBN</a></li>
-                            <li><a class="dropdown-item" href="#">Add Content</a></li>
+                            <li><a class="dropdown-item" href="{% url 'isbn-create' %}">Update ISBN</a></li>
+                            <li><a class="dropdown-item" href="{% url 'isbn-create' %}">Delete ISBN</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
                             <li><a class="dropdown-item" href="#">Add an Issue</a></li>
                         </ul>
                     </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            Basic Data
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Authors List</a></li>
+                            <li><a class="dropdown-item" href="#">Translators List</a></li>
+                            <li><a class="dropdown-item" href="#">Ilustrators List</a></li>
+                            <li><a class="dropdown-item" href="#">Publisher List</a></li>
+                            <li><a class="dropdown-item" href="#">Prizes List</a></li>
+                            <li><a class="dropdown-item" href="#">Market Info List</a></li>
+                            <li><a class="dropdown-item" href="#">Shoora Book Groups</a></li>
+                            <li><a class="dropdown-item" href="#">Shoora Book Info</a></li>
+                            <li><a class="dropdown-item" href="#">Content Info</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Add an Issue</a></li>
+                        </ul>
+                    </li>
+
+
+
                     <li class="nav-item">
                         <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Reports</a>
                     </li>
-                    {% if request.user.is_authenticated %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'dashboard' %}">Dashboard</a>
-                    </li>
                     {% endif %}
-
+                    {# The Admin part of navbar #}
                     {% if request.user.is_superuser %}
                     <li class="class=" nav-item
                     "">
                     <a class="nav-link" href="{% url 'admin:index' %}">{% trans 'Admin' %}</a>
                     </li>
                     {% endif %}
+
+                    {% if request.user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'dashboard' %}">Dashboard</a>
+                    </li>
+                    {% endif %}
+
+
                     <li class="nav-item text-danger">
                         {% if request.user.is_authenticated %}
                         <a class="nav-link" href="{% url 'logout' %}">{% trans 'Logout' %}</a>

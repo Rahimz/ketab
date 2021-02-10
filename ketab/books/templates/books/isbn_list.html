@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block body %}
+<h2>ISBN</h2>
+<ul>
+    {% for isbn in object_list %}
+    <li>{{ isbn.code }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

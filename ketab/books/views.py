@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.views.generic import ListView
 from django.urls import reverse_lazy
 from django.http import HttpResponse
 from .models import Book, Author, Critique, Collection, ISBN, Market, Shoora
@@ -56,6 +57,9 @@ def collectiondetail(request, pk):
                   'books/collection_detail.html',
                   {'collection': collection,
                    'books': books})
+
+class IsbnList(ListView):
+    model = ISBN
 
 
 class IsbnCreate(CreateView):
