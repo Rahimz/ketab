@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block body %}
+  <form action="" method="post">
+      <ul>
+          <li>The ISBN is the most important identification for a book</li>
+          <li>The structure of its 13-digits character xxx-xx-xxxx-xxx-x or the older 10-digits is xx-xxxx-xxx-x </li>
+          <li>If you do not know hoe to define an ISBN you should contanct the administration of Website</li>
+      </ul>
+    {% csrf_token %}
+    <table>
+    {{ form.as_table }}
+    </table>
+    <input class="m-2" type="submit" value="Update ISBN">
+  </form>
+{% endblock %}

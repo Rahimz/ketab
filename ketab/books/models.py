@@ -5,6 +5,9 @@ from django.urls import reverse
 class ISBN(models.Model):
     code = models.IntegerField(unique=True)
 
+    def get_absolute_url(self):
+        return reverse('isbn_detail', args=[self.pk])
+
     def __str__(self):
         return str(self.code)
 
