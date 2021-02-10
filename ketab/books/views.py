@@ -62,3 +62,14 @@ class IsbnCreate(CreateView):
     model = ISBN
     fields = '__all__'
     success_url = reverse_lazy('booklist')
+
+
+class IsbnUpdate(UpdateView):
+    model = ISBN
+    fields = '__all__'
+    success_url = reverse_lazy('booklist')
+
+
+class IsbnDelete(DeleteView):
+    model = ISBN
+    success_url = reverse_lazy('booklist')

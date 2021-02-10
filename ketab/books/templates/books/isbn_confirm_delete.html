@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<h1>Delete Author</h1>
+
+<p>Are you sure you want to delete the ISBN: <b>{{ isbn }}</b>?</p>
+<p class="bg-warning p-3"><b>NOTE: </b>All of the book details which is related to this ISBN will be removed permanently</p>
+
+<form action="" method="POST">
+  {% csrf_token %}
+  <input type="submit" value="Yes, delete.">
+</form>
+
+{% endblock %}
