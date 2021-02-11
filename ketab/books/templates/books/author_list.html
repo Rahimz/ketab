@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block body %}
+<h2>Authors</h2>
+<div class="row">
+    <p>
+    <a href="{% url 'author_create' %}" class="btn btn-outline-secondary">Add an Author</a>
+    </p>
+</div>
+<h3>List of Authors</h3>
+<ul>
+    {% for author in object_list %}
+    <li><a href="{% url 'author_detail' author.pk %}">{{ author.name }}</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}

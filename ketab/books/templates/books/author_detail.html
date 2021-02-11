@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block body %}
+<div>
+    <h2>Author Details</h2>
+    <p>Name: {{ author.name }}</p>
+    <p>Latin Name: {{ author.latin_name }}</p>
+    <p>Nationality: {{ author.nationality }}</p>
+    {% if book %}
+    {{ book.name }}
+    {% else %}
+    <p></p>
+    {% endif %}
+</div>
+{% endblock %}

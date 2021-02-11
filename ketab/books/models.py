@@ -14,6 +14,10 @@ class ISBN(models.Model):
 
 class Author(models.Model):
     name = models.CharField(max_length=1500,)
+    latin_name = models.CharField(max_length=1500,
+                                  blank=True, null=True)
+    nationality = models.CharField(max_length=1500,
+                                   blank=True, null=True)
 
     class Meta:
         ordering = ['name']

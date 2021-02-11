@@ -15,4 +15,8 @@ urlpatterns = [
     path('isbn/create/', views.IsbnCreate.as_view(), name='isbn-create'),
     path('isbn/<int:isbn>/update/', views.IsbnUpdate, name='isbn_update'),
     path('isbn/<int:isbn>/delete/', views.IsbnDelete, name='isbn_delete'),
+
+    path('authors/', views.AuthorList.as_view(), name='author_list'),
+    path('authors/create/', views.AuthorCreate.as_view(), name='author_create'),
+    path('authors/<int:pk>', views.AuthorDetail.as_view(), name='author_detail'),
     ]

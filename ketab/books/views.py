@@ -111,7 +111,7 @@ def IsbnUpdate(request, isbn):
 
 
 
-
+# Author Views
 class IsbnDelete(DeleteView):
     model = ISBN
     success_url = reverse_lazy('isbn_list')
@@ -119,3 +119,16 @@ class IsbnDelete(DeleteView):
 
 class AuthorList(ListView):
     model = Author
+
+
+class AuthorCreate(CreateView):
+    model = Author
+    fields = '__all__'
+    success_url = reverse_lazy('author_list')
+
+
+class AuthorDetail(DetailView):
+    model = Author
+    # TODO: we should add a list of author's book
+
+
