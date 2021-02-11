@@ -54,11 +54,11 @@
                     {# the staff part of navbar #}
                     {% if  request.user.is_staff %}
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        <a class="nav-link dropdown-toggle" href="#" id="isbnDropdown" role="button"
                            data-bs-toggle="dropdown" aria-expanded="false">
                             ISBN
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <ul class="dropdown-menu" aria-labelledby="isbnDropdown">
                             <li><a class="dropdown-item" href="{% url 'isbn_list' %}">ISBN List</a></li>
                             <li><a class="dropdown-item" href="{% url 'isbn-create' %}">Add ISBN</a></li>
                             <li><a class="dropdown-item disabled" href="#">Update ISBN</a></li>
@@ -66,28 +66,28 @@
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="#">Add an Issue</a></li>
+                            <li><a class="dropdown-item disabled" href="#">Add an Issue</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        <a class="nav-link dropdown-toggle" href="#" id="basicDataDropdown" role="button"
                            data-bs-toggle="dropdown" aria-expanded="false">
                             Basic Data
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="{% url 'author_list' %}">Authors List</a></li>
-                            <li><a class="dropdown-item" href="{% url 'translator_list' %}">Translators List</a></li>
-                            <li><a class="dropdown-item" href="#">Ilustrators List</a></li>
-                            <li><a class="dropdown-item" href="#">Publisher List</a></li>
-                            <li><a class="dropdown-item" href="#">Prizes List</a></li>
-                            <li><a class="dropdown-item" href="#">Market Info List</a></li>
-                            <li><a class="dropdown-item" href="#">Shoora Book Groups</a></li>
-                            <li><a class="dropdown-item" href="#">Shoora Book Info</a></li>
-                            <li><a class="dropdown-item" href="#">Content Info</a></li>
+                        <ul class="dropdown-menu" aria-labelledby="basicDataDropdown">
+                            <li><a class="dropdown-item" href="{% url 'author_list' %}">Authors</a></li>
+                            <li><a class="dropdown-item" href="{% url 'translator_list' %}">Translators</a></li>
+                            <li><a class="dropdown-item disabled" href="#">Ilustrators</a></li>
+                            <li><a class="dropdown-item disabled" href="#">Publisher</a></li>
+                            <li><a class="dropdown-item disabled" href="#">Prizes</a></li>
+                            <li><a class="dropdown-item disabled" href="#">Market Info</a></li>
+                            <li><a class="dropdown-item disabled" href="#">Shoora Book Groups</a></li>
+                            <li><a class="dropdown-item disabled" href="#">Shoora Book Info</a></li>
+                            <li><a class="dropdown-item disabled" href="#">Content Info</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="#">Add an Issue</a></li>
+                            <li><a class="dropdown-item disabled" href="#">Add an Issue</a></li>
                         </ul>
                     </li>
 
