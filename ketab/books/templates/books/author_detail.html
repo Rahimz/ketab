@@ -6,10 +6,13 @@
     <p>Name: {{ author.name }}</p>
     <p>Latin Name: {{ author.latin_name }}</p>
     <p>Nationality: {{ author.nationality }}</p>
-    {% if book %}
-    {{ book.name }}
+    <h3>Books of {{ author.name }}</h3>
+    {% if books %}
+     {% for book in books %}
+            <li><a href="{{ book.get_absolute_url }}">{{ book }}</a></li>
+        {% endfor %}
     {% else %}
-    <p></p>
+    <p>There is not any book related to this Author.</p>
     {% endif %}
 </div>
 {% endblock %}

@@ -128,9 +128,21 @@ class AuthorCreate(CreateView):
     success_url = reverse_lazy('author_list')
 
 
-class AuthorDetail(DetailView):
-    model = Author
-    # TODO: we should add a list of author's book
+def AuthorDetail(request, pk):
+    author = get_object_or_404(Author, pk=pk)
+    books = None
+    book_id1 = Book.objects.filter(author_1=author).values_list('id', flat=True)
+    book_id2 = Book.objects.filter(author_2=author).values_list('id', flat=True)
+    book_ids = book_id1 | book_id2
+    try:
+        books = Book.objects.filter(id__in=book_ids)
+    except Book.DoesNotExist:
+        books = None
+
+    return render(request,
+                  'books/author_detail.html',
+                  {'author': author,
+                   'books': books})
 
 
 # Translator Views
@@ -159,6 +171,3 @@ def TranslatorDetail(request, pk):
                   'books/translator_detail.html',
                   {'translator': translator,
                    'books': books})
-
-
-    # TODO: we should add a list of translator's book
