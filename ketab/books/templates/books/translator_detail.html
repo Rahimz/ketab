@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block body %}
+<div>
+    <h2>Translator Details</h2>
+    <p>Name: {{ translator.name }}</p>
+    <p>Latin Name: {{ translator.latin_name }}</p>
+    <p>Nationality: {{ translator.nationality }}</p>
+    <h3>Books of {{ translator.name }}</h3>
+    {% if books %}
+        <ul>
+        {% for book in books %}
+            <li><a href="{{ book.get_absolute_url }}">{{ book }}</a></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>There is not any book related to this translator.</p>
+    {% endif %}
+</div>
+{% endblock %}

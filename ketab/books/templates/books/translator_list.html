@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block body %}
+<h2>Translators</h2>
+<div class="row">
+    <p>
+    <a href="{% url 'translator_create' %}" class="btn btn-outline-secondary">Add a Translator</a>
+    </p>
+</div>
+<h3>List of translators</h3>
+<ul>
+    {% for translator in object_list %}
+    <li><a href="{% url 'translator_detail' translator.pk %}">{{ translator.name }}</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}

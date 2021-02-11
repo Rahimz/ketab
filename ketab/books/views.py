@@ -3,7 +3,7 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic import ListView, DetailView
 from django.urls import reverse_lazy
 from django.http import HttpResponse
-from .models import Book, Author, Critique, Collection, ISBN, Market, Shoora
+from .models import Book, Author, Translator, Critique, Collection, ISBN, Market, Shoora
 from .forms import IsbnFormUpdate
 
 
@@ -24,6 +24,8 @@ def bookdetail(request, isbn):
     isbn = get_object_or_404(ISBN,
                              code=isbn)
     book = Book.objects.all().get(isbn=isbn)
+    market = None
+    shoora = None
     critiques = Critique.objects.filter(book=book)
     collection = Collection.objects.filter(name=book.collection)
     try:
@@ -110,13 +112,12 @@ def IsbnUpdate(request, isbn):
                   {'form': form})
 
 
-
-# Author Views
 class IsbnDelete(DeleteView):
     model = ISBN
     success_url = reverse_lazy('isbn_list')
 
 
+# Author Views
 class AuthorList(ListView):
     model = Author
 
@@ -132,3 +133,32 @@ class AuthorDetail(DetailView):
     # TODO: we should add a list of author's book
 
 
+# Translator Views
+class TranslatorList(ListView):
+    model = Translator
+
+
+class TranslatorCreate(CreateView):
+    model = Translator
+    fields = '__all__'
+    success_url = reverse_lazy('translator_list')
+
+
+def TranslatorDetail(request, pk):
+    translator = get_object_or_404(Translator, pk=pk)
+    books = None
+    book_id1 = Book.objects.filter(translator_1=translator).values_list('id', flat=True)
+    book_id2 = Book.objects.filter(translator_2=translator).values_list('id', flat=True)
+    book_ids = book_id1 | book_id2
+    try:
+        books = Book.objects.filter(id__in=book_ids)
+    except Book.DoesNotExist:
+        books = None
+
+    return render(request,
+                  'books/translator_detail.html',
+                  {'translator': translator,
+                   'books': books})
+
+
+    # TODO: we should add a list of translator's book

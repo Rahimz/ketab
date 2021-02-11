@@ -19,4 +19,8 @@ urlpatterns = [
     path('authors/', views.AuthorList.as_view(), name='author_list'),
     path('authors/create/', views.AuthorCreate.as_view(), name='author_create'),
     path('authors/<int:pk>', views.AuthorDetail.as_view(), name='author_detail'),
+
+    path('translators/', views.TranslatorList.as_view(), name='translator_list'),
+    path('translators/create/', views.TranslatorCreate.as_view(), name='translator_create'),
+    path('translators/<int:pk>', views.TranslatorDetail, name='translator_detail'),
     ]
