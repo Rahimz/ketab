@@ -8,6 +8,6 @@
 
 {% block body %}
 
-<p>{% blocktrans %}Hello {{ request.user }}!{% endblocktrans %}</p>
+<p>{% blocktrans with name=request.user %}Hello {{ name }}!{% endblocktrans %}</p>
 
 {% endblock %}

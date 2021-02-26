@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-02-26 12:00+0330\n"
+"POT-Creation-Date: 2021-02-26 12:32+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -279,13 +279,13 @@ msgstr ""
 
 #: books/templates/books/home.html:11
 #, python-format
-msgid "Hello %(request.user)s!"
-msgstr ""
-
-#: ketab/settings.py:114
-msgid "English"
+msgid "Hello %(name)s!"
 msgstr ""
 
 #: ketab/settings.py:115
+msgid "English"
+msgstr ""
+
+#: ketab/settings.py:116
 msgid "Farsi"
 msgstr ""
