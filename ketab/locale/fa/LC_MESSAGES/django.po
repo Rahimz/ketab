@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-02-26 12:32+0330\n"
-"PO-Revision-Date: 2021-02-26 09:03+0000\n"
+"POT-Creation-Date: 2021-02-26 12:47+0330\n"
+"PO-Revision-Date: 2021-02-26 09:18+0000\n"
 "Last-Translator: b'Rahim Aghreb <rahim.aghareb@gmail.com>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -34,7 +34,7 @@ msgstr "گذر‌واژه‌ها یکسان نیستند."
 #: account/templates/account/create_profile.html:5
 #: account/templates/account/dashboard.html:7
 #: account/templates/account/dashboard.html:14
-#: account/templates/account/edit.html:5
+#: account/templates/account/edit.html:5 books/templates/base.html:110
 msgid "Dashboard"
 msgstr "داشبورد"
 
@@ -277,6 +277,91 @@ msgstr "ایمیل خود را وارد کنید تا گذرواژه جدید د
 msgid "Send e-mail"
 msgstr "ارسال ایمیل"
 
+#: books/templates/base.html:37
+#| msgid "2021 CBC & Ketabkhone"
+msgid "Ketabkhone"
+msgstr "کتابخونه"
+
+#: books/templates/base.html:46
+msgid "Home"
+msgstr "خانه"
+
+#: books/templates/base.html:49
+msgid "Books"
+msgstr "کتاب‌ها"
+
+#: books/templates/base.html:52
+msgid "Collections"
+msgstr "مجموعه‌ها"
+
+#: books/templates/base.html:59
+msgid "ISBN"
+msgstr "ISBN"
+
+#: books/templates/base.html:62
+msgid "ISBN List"
+msgstr "لیست ISBN"
+
+#: books/templates/base.html:63
+msgid "Add ISBN"
+msgstr "اضافه کردن ISBN"
+
+#: books/templates/base.html:64
+msgid "Update ISBN"
+msgstr "به روزرسانی ISBN"
+
+#: books/templates/base.html:65
+msgid "Delete ISBN"
+msgstr "حذف ISBN"
+
+#: books/templates/base.html:69 books/templates/base.html:90
+msgid "Add an Issue"
+msgstr "ثبت مشکل"
+
+#: books/templates/base.html:75
+msgid "Basic Data"
+msgstr "اطلاعات پایه"
+
+#: books/templates/base.html:78
+msgid "Authors"
+msgstr "نویسندگان"
+
+#: books/templates/base.html:79
+msgid "Translators"
+msgstr "مترجمان"
+
+#: books/templates/base.html:80
+msgid "Ilustrators"
+msgstr "تصویرگران"
+
+#: books/templates/base.html:81
+msgid "Publisher"
+msgstr "ناشران"
+
+#: books/templates/base.html:82
+msgid "Prizes"
+msgstr "جوایز"
+
+#: books/templates/base.html:83
+msgid "Market Info"
+msgstr "اطلاعات بازار"
+
+#: books/templates/base.html:84
+msgid "Shoora Book Groups"
+msgstr "گروه‌های کتاب شورا"
+
+#: books/templates/base.html:85
+msgid "Shoora Book Info"
+msgstr "اطلاعات کتاب شورا"
+
+#: books/templates/base.html:86
+msgid "Content Info"
+msgstr "اطلاعات تماس"
+
+#: books/templates/base.html:97
+msgid "Reports"
+msgstr "گزارش‌ها"
+
 #: books/templates/base.html:104
 msgid "Admin"
 msgstr "مدیر"
@@ -285,9 +370,28 @@ msgstr "مدیر"
 msgid "Logout"
 msgstr "خروج"
 
+#: books/templates/base.html:144
+msgid "2021 CBC & Ketabkhone"
+msgstr "کتابخونه و شورای کتاب کودک"
+
+#: books/templates/base.html:146
+msgid "Privacy"
+msgstr "حریم خصوصی"
+
+#: books/templates/base.html:147
+msgid "Terms"
+msgstr "قوانین"
+
+#: books/templates/base.html:148
+msgid "Support"
+msgstr "پشتیبانی"
+
+#: books/templates/books/home.html:7
+msgid "Home Pgae"
+msgstr "خانه"
+
 #: books/templates/books/home.html:11
 #, python-format
-#| msgid "Hello %(request.user)s!"
 msgid "Hello %(name)s!"
 msgstr " %(name)s سلام!"
 

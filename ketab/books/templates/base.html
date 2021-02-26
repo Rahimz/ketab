@@ -34,7 +34,7 @@
 
     <nav class="navbar navbar-light navbar-expand-lg" style="background-color: #e3f2fd;">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Ketabkhone</a>
+            <a class="navbar-brand" href="#">{% trans 'Ketabkhone' %}</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -43,58 +43,58 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link {% block home_active %}{% endblock %}" aria-current="page" href="{% url 'home' %}">Home</a>
+                        <a class="nav-link {% block home_active %}{% endblock %}" aria-current="page" href="{% url 'home' %}">{% trans 'Home' %}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% block book_active %}{% endblock %}" href="{% url 'booklist' %}">Books</a>
+                        <a class="nav-link {% block book_active %}{% endblock %}" href="{% url 'booklist' %}">{% trans 'Books' %}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% block collection_active %}{% endblock %}" href="{% url 'collectionlist' %}">Collections</a>
+                        <a class="nav-link {% block collection_active %}{% endblock %}" href="{% url 'collectionlist' %}">{% trans 'Collections' %}</a>
                     </li>
                     {# the staff part of navbar #}
                     {% if  request.user.is_staff %}
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle {% block isbn_active %}{% endblock %}" href="#" id="isbnDropdown" role="button"
                            data-bs-toggle="dropdown" aria-expanded="false">
-                            ISBN
+                            {% trans 'ISBN' %}
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="isbnDropdown">
-                            <li><a class="dropdown-item" href="{% url 'isbn_list' %}">ISBN List</a></li>
-                            <li><a class="dropdown-item" href="{% url 'isbn-create' %}">Add ISBN</a></li>
-                            <li><a class="dropdown-item disabled" href="#">Update ISBN</a></li>
-                            <li><a class="dropdown-item disabled" href="#">Delete ISBN</a></li>
+                            <li><a class="dropdown-item" href="{% url 'isbn_list' %}">{% trans 'ISBN List' %}</a></li>
+                            <li><a class="dropdown-item" href="{% url 'isbn-create' %}">{% trans 'Add ISBN' %}</a></li>
+                            <li><a class="dropdown-item disabled" href="#">{% trans 'Update ISBN' %}</a></li>
+                            <li><a class="dropdown-item disabled" href="#">{% trans 'Delete ISBN' %}</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item disabled" href="#">Add an Issue</a></li>
+                            <li><a class="dropdown-item disabled" href="#">{% trans 'Add an Issue' %}</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle {% block basic_active %}{% endblock %}" href="#" id="basicDataDropdown" role="button"
                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Basic Data
+                            {% trans 'Basic Data' %}
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="basicDataDropdown">
-                            <li><a class="dropdown-item" href="{% url 'author_list' %}">Authors</a></li>
-                            <li><a class="dropdown-item" href="{% url 'translator_list' %}">Translators</a></li>
-                            <li><a class="dropdown-item disabled" href="#">Ilustrators</a></li>
-                            <li><a class="dropdown-item disabled" href="#">Publisher</a></li>
-                            <li><a class="dropdown-item disabled" href="#">Prizes</a></li>
-                            <li><a class="dropdown-item disabled" href="#">Market Info</a></li>
-                            <li><a class="dropdown-item disabled" href="#">Shoora Book Groups</a></li>
-                            <li><a class="dropdown-item disabled" href="#">Shoora Book Info</a></li>
-                            <li><a class="dropdown-item disabled" href="#">Content Info</a></li>
+                            <li><a class="dropdown-item" href="{% url 'author_list' %}">{% trans 'Authors' %}</a></li>
+                            <li><a class="dropdown-item" href="{% url 'translator_list' %}">{% trans 'Translators' %}</a></li>
+                            <li><a class="dropdown-item disabled" href="#">{% trans 'Ilustrators' %}</a></li>
+                            <li><a class="dropdown-item disabled" href="#">{% trans 'Publisher' %}</a></li>
+                            <li><a class="dropdown-item disabled" href="#">{% trans 'Prizes' %}</a></li>
+                            <li><a class="dropdown-item disabled" href="#">{% trans 'Market Info' %}</a></li>
+                            <li><a class="dropdown-item disabled" href="#">{% trans 'Shoora Book Groups' %}</a></li>
+                            <li><a class="dropdown-item disabled" href="#">{% trans 'Shoora Book Info' %}</a></li>
+                            <li><a class="dropdown-item disabled" href="#">{% trans 'Content Info' %}</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item disabled" href="#">Add an Issue</a></li>
+                            <li><a class="dropdown-item disabled" href="#">{% trans 'Add an Issue' %}</a></li>
                         </ul>
                     </li>
 
 
 
                     <li class="nav-item">
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Reports</a>
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">{% trans 'Reports' %}</a>
                     </li>
                     {% endif %}
                     {# The Admin part of navbar #}
@@ -107,7 +107,7 @@
 
                     {% if request.user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link {% block dash_active %}{% endblock %}" href="{% url 'dashboard' %}">Dashboard</a>
+                        <a class="nav-link {% block dash_active %}{% endblock %}" href="{% url 'dashboard' %}">{% trans 'Dashboard' %}</a>
                     </li>
                     {% endif %}
 
@@ -141,11 +141,11 @@
 
 <footer class=" text-muted mt-5 text-center text-small footer" style="background-color: #e3f2fd;">
     <div class="container">
-        <p class="mb-1">&copy; 2021 CBC & Ketabkhone</p>
+        <p class="mb-1">&copy;{% trans '2021 CBC & Ketabkhone' %}</p>
         <ul class="list-inline ">
-            <li class="list-inline-item "><a class="text-muted" href="#">Privacy</a></li>
-            <li class="list-inline-item"><a class="text-muted" href="#">Terms</a></li>
-            <li class="list-inline-item"><a class="text-muted" href="#">Support</a></li>
+            <li class="list-inline-item "><a class="text-muted" href="#">{% trans 'Privacy' %}</a></li>
+            <li class="list-inline-item"><a class="text-muted" href="#">{% trans 'Terms' %}</a></li>
+            <li class="list-inline-item"><a class="text-muted" href="#">{% trans 'Support' %}</a></li>
         </ul>
     </div>
 </footer>
