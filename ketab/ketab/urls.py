@@ -20,8 +20,10 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('books.urls')),
     path('account/', include('account.urls')),
+    path('rosetta/', include('rosetta.urls')),
+    path('', include('books.urls')),
+
 ]
 
 if settings.DEBUG:
