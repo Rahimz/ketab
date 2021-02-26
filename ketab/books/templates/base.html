@@ -43,18 +43,18 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+                        <a class="nav-link {% block home_active %}{% endblock %}" aria-current="page" href="{% url 'home' %}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'booklist' %}">Books</a>
+                        <a class="nav-link {% block book_active %}{% endblock %}" href="{% url 'booklist' %}">Books</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'collectionlist' %}">Collections</a>
+                        <a class="nav-link {% block collection_active %}{% endblock %}" href="{% url 'collectionlist' %}">Collections</a>
                     </li>
                     {# the staff part of navbar #}
                     {% if  request.user.is_staff %}
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="isbnDropdown" role="button"
+                        <a class="nav-link dropdown-toggle {% block isbn_active %}{% endblock %}" href="#" id="isbnDropdown" role="button"
                            data-bs-toggle="dropdown" aria-expanded="false">
                             ISBN
                         </a>
@@ -70,7 +70,7 @@
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="basicDataDropdown" role="button"
+                        <a class="nav-link dropdown-toggle {% block basic_active %}{% endblock %}" href="#" id="basicDataDropdown" role="button"
                            data-bs-toggle="dropdown" aria-expanded="false">
                             Basic Data
                         </a>
@@ -107,7 +107,7 @@
 
                     {% if request.user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'dashboard' %}">Dashboard</a>
+                        <a class="nav-link {% block dash_active %}{% endblock %}" href="{% url 'dashboard' %}">Dashboard</a>
                     </li>
                     {% endif %}
 
