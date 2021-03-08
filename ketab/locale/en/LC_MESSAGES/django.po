@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-02-26 13:41+0330\n"
+"POT-Creation-Date: 2021-03-08 10:41+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -277,7 +277,7 @@ msgstr ""
 msgid "Home"
 msgstr ""
 
-#: books/templates/base.html:39
+#: books/templates/base.html:39 books/templates/books/collection_detail.html:13
 msgid "Books"
 msgstr ""
 
@@ -289,15 +289,16 @@ msgstr ""
 msgid "ISBN"
 msgstr ""
 
-#: books/templates/base.html:51
+#: books/templates/base.html:51 books/templates/books/isbn_list.html:7
 msgid "ISBN List"
 msgstr ""
 
-#: books/templates/base.html:52
+#: books/templates/base.html:52 books/templates/books/isbn_form.html:7
+#: books/templates/books/isbn_form.html:20
 msgid "Add ISBN"
 msgstr ""
 
-#: books/templates/base.html:53
+#: books/templates/base.html:53 books/templates/books/isbn_update.html:18
 msgid "Update ISBN"
 msgstr ""
 
@@ -313,11 +314,11 @@ msgstr ""
 msgid "Basic Data"
 msgstr ""
 
-#: books/templates/base.html:66
+#: books/templates/base.html:66 books/templates/books/author_list.html:8
 msgid "Authors"
 msgstr ""
 
-#: books/templates/base.html:68
+#: books/templates/base.html:68 books/templates/books/translator_list.html:8
 msgid "Translators"
 msgstr ""
 
@@ -361,7 +362,7 @@ msgstr ""
 msgid "Logout"
 msgstr ""
 
-#: books/templates/base.html:110
+#: books/templates/base.html:110 books/templates/books/book_detail.html:83
 msgid "Language"
 msgstr ""
 
@@ -381,12 +382,56 @@ msgstr ""
 msgid "Support"
 msgstr ""
 
-#: books/templates/books/book_detail.html:7
-msgid "Book details"
+#: books/templates/books/author_detail.html:9
+msgid "Author Details"
 msgstr ""
 
+#: books/templates/books/author_detail.html:10
 #: books/templates/books/book_detail.html:11
+#: books/templates/books/collection_detail.html:11
+#: books/templates/books/translator_detail.html:10
 msgid "Name"
+msgstr ""
+
+#: books/templates/books/author_detail.html:11
+#: books/templates/books/translator_detail.html:11
+msgid "Latin Name"
+msgstr ""
+
+#: books/templates/books/author_detail.html:12
+#: books/templates/books/book_detail.html:84
+#: books/templates/books/translator_detail.html:12
+msgid "Nationality"
+msgstr ""
+
+#: books/templates/books/author_detail.html:13
+#: books/templates/books/translator_detail.html:13
+msgid "Books of"
+msgstr ""
+
+#: books/templates/books/author_detail.html:19
+msgid "There is not any book related to this Author"
+msgstr ""
+
+#: books/templates/books/author_form.html:8
+msgid "Add author"
+msgstr ""
+
+#: books/templates/books/author_form.html:12
+msgid "You can add an author and then you could use it in a book registering."
+msgstr ""
+
+#: books/templates/books/author_form.html:18
+#: books/templates/books/author_list.html:11
+msgid "Add Author"
+msgstr ""
+
+#: books/templates/books/author_list.html:14
+msgid "List of Authors"
+msgstr ""
+
+#: books/templates/books/book_detail.html:7
+msgid "Book details"
 msgstr ""
 
 #: books/templates/books/book_detail.html:13
@@ -422,6 +467,7 @@ msgid "Is a Collection"
 msgstr ""
 
 #: books/templates/books/book_detail.html:21
+#: books/templates/books/collection_detail.html:7
 msgid "Collection"
 msgstr ""
 
@@ -462,11 +508,144 @@ msgid "Tags"
 msgstr ""
 
 #: books/templates/books/book_detail.html:33
+#: books/templates/books/book_detail.html:77
 msgid "Genre"
 msgstr ""
 
 #: books/templates/books/book_detail.html:39
 msgid "Critiques"
+msgstr ""
+
+#: books/templates/books/book_detail.html:47
+msgid "Market Info."
+msgstr ""
+
+#: books/templates/books/book_detail.html:48
+msgid "Shoora Info."
+msgstr ""
+
+#: books/templates/books/book_detail.html:52
+msgid "Market info"
+msgstr ""
+
+#: books/templates/books/book_detail.html:53
+msgid "Available"
+msgstr ""
+
+#: books/templates/books/book_detail.html:53
+msgid "Yes"
+msgstr ""
+
+#: books/templates/books/book_detail.html:53
+msgid "No"
+msgstr ""
+
+#: books/templates/books/book_detail.html:54
+msgid "Last Price"
+msgstr ""
+
+#: books/templates/books/book_detail.html:55
+msgid "Last Published Year"
+msgstr ""
+
+#: books/templates/books/book_detail.html:56
+msgid "Last Circulation"
+msgstr ""
+
+#: books/templates/books/book_detail.html:57
+msgid "Updated"
+msgstr ""
+
+#: books/templates/books/book_detail.html:59
+msgid "There is no market info"
+msgstr ""
+
+#: books/templates/books/book_detail.html:67
+msgid "Shoora info"
+msgstr ""
+
+#: books/templates/books/book_detail.html:68
+msgid "Book group"
+msgstr ""
+
+#: books/templates/books/book_detail.html:69
+msgid "Subject"
+msgstr ""
+
+#: books/templates/books/book_detail.html:70
+msgid "Category"
+msgstr ""
+
+#: books/templates/books/book_detail.html:71
+msgid "Satiric"
+msgstr ""
+
+#: books/templates/books/book_detail.html:72
+msgid "Main character"
+msgstr ""
+
+#: books/templates/books/book_detail.html:73
+msgid "Main character description"
+msgstr ""
+
+#: books/templates/books/book_detail.html:74
+msgid "Point of View"
+msgstr ""
+
+#: books/templates/books/book_detail.html:75
+msgid "Events_place"
+msgstr ""
+
+#: books/templates/books/book_detail.html:76
+msgid "Child special need"
+msgstr ""
+
+#: books/templates/books/book_detail.html:78
+msgid "Genre Description"
+msgstr ""
+
+#: books/templates/books/book_detail.html:79
+msgid "Age Range"
+msgstr ""
+
+#: books/templates/books/book_detail.html:80
+msgid "Position"
+msgstr ""
+
+#: books/templates/books/book_detail.html:81
+msgid "Book latin name"
+msgstr ""
+
+#: books/templates/books/book_detail.html:82
+msgid "Author latin name"
+msgstr ""
+
+#: books/templates/books/book_detail.html:85
+msgid "Score"
+msgstr ""
+
+#: books/templates/books/book_detail.html:86
+msgid "Other translations"
+msgstr ""
+
+#: books/templates/books/book_detail.html:87
+msgid "Cpoyright"
+msgstr ""
+
+#: books/templates/books/book_detail.html:91
+msgid "There is no shoora info"
+msgstr ""
+
+#: books/templates/books/books_list.html:7
+msgid "Books List"
+msgstr ""
+
+#: books/templates/books/collection_detail.html:12
+msgid "Code"
+msgstr ""
+
+#: books/templates/books/collections_list.html:7
+msgid "Collections List"
 msgstr ""
 
 #: books/templates/books/home.html:7
@@ -476,6 +655,86 @@ msgstr ""
 #: books/templates/books/home.html:11
 #, python-format
 msgid "Hello %(name)s!"
+msgstr ""
+
+#: books/templates/books/isbn_confirm_delete.html:9
+msgid "Delete Author"
+msgstr ""
+
+#: books/templates/books/isbn_confirm_delete.html:11
+msgid "Are you sure you want to delete the ISBN"
+msgstr ""
+
+#: books/templates/books/isbn_confirm_delete.html:12
+msgid "NOTE"
+msgstr ""
+
+#: books/templates/books/isbn_confirm_delete.html:12
+msgid ""
+"All of the book details which is related to this ISBN will be removed "
+"permanently"
+msgstr ""
+
+#: books/templates/books/isbn_confirm_delete.html:16
+msgid "Yes, delete."
+msgstr ""
+
+#: books/templates/books/isbn_detail.html:9
+msgid "ISBN Details"
+msgstr ""
+
+#: books/templates/books/isbn_detail.html:20
+msgid "There is no book related to this ISBN"
+msgstr ""
+
+#: books/templates/books/isbn_form.html:12
+#: books/templates/books/isbn_update.html:10
+msgid "The ISBN is the most important identification for a book"
+msgstr ""
+
+#: books/templates/books/isbn_form.html:13
+msgid ""
+"The structure of its 13-digits character xxx-xx-xxxx-xxx-x or the older 10-"
+"digits is xx-xxxx-xxx-x "
+msgstr ""
+
+#: books/templates/books/isbn_form.html:14
+#: books/templates/books/isbn_update.html:12
+msgid ""
+"If you do not know hoe to define an ISBN you should contanct the "
+"administration of Website"
+msgstr ""
+
+#: books/templates/books/isbn_update.html:11
+msgid ""
+"The structure of its 13-digits character xxx-xx-xxxx-xxx-x or the older 10-"
+"digits is xx-xxxx-xxx-x"
+msgstr ""
+
+#: books/templates/books/translator_detail.html:9
+msgid "Translator Details"
+msgstr ""
+
+#: books/templates/books/translator_detail.html:21
+msgid "There is not any book related to this translator"
+msgstr ""
+
+#: books/templates/books/translator_form.html:8
+msgid "Add translator"
+msgstr ""
+
+#: books/templates/books/translator_form.html:12
+msgid ""
+"You can add a translator and then you could use it in a book registering"
+msgstr ""
+
+#: books/templates/books/translator_form.html:18
+#: books/templates/books/translator_list.html:11
+msgid "Add Translator"
+msgstr ""
+
+#: books/templates/books/translator_list.html:14
+msgid "List of translators"
 msgstr ""
 
 #: ketab/settings.py:115

@@ -1,20 +1,22 @@
 {% extends "base.html" %}
 
+{% load i18n %}
+
 {% block isbn_active %}active{% endblock %}
 
 {% block body %}
 <div>
-    <h2>ISBN Details</h2>
+    <h2>{% trans 'ISBN Details' %}</h2>
     <p>{{ isbn }}
         {% comment %}
         <!--   The button disabled because editing something related to url is cause some problems     -->
-        <a class="btn btn-outline-secondary" href="{% url 'isbn_update' isbn %}">Update ISBN</a>
+        <a class="btn btn-outline-secondary" href="{% url 'isbn_update' isbn %}">{% trans 'Update ISBN' %}</a>
         {% endcomment %}
     </p>
     {% if book %}
     {{ book.name }}
     {% else %}
-    <p>There is no book related to this ISBN </p>
+    <p>{% trans 'There is no book related to this ISBN' %}!</p>
     {% endif %}
 </div>
 {% endblock %}

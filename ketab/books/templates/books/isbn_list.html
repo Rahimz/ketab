@@ -1,9 +1,13 @@
 {% extends "base.html" %}
 
+{% load i18n %}
+
 {% block isbn_active %}active{% endblock %}
 
+{% block title %} {% trans 'ISBN List' %} {% endblock %}
+
 {% block body %}
-<h2>ISBN</h2>
+
 <ul>
     {% for isbn in object_list %}
     <li><a href="{% url 'isbn_detail' isbn.code %}">{{ isbn.code }}</a></li>

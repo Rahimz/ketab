@@ -1,14 +1,16 @@
 {% extends "base.html" %}
 
+{% load i18n %}
+
 {% block basic_active %}active{% endblock %}
 
 {% block body %}
 <div>
-    <h2>Translator Details</h2>
-    <p>Name: {{ translator.name }}</p>
-    <p>Latin Name: {{ translator.latin_name }}</p>
-    <p>Nationality: {{ translator.nationality }}</p>
-    <h3>Books of {{ translator.name }}</h3>
+    <h2>{% trans 'Translator Details' %}</h2>
+    <p>{% trans 'Name' %}: {{ translator.name }}</p>
+    <p>{% trans 'Latin Name' %}: {{ translator.latin_name }}</p>
+    <p>{% trans 'Nationality' %}: {{ translator.nationality }}</p>
+    <h3>{% trans 'Books of' %} {{ translator.name }}</h3>
     {% if books %}
         <ul>
         {% for book in books %}
@@ -16,7 +18,7 @@
         {% endfor %}
         </ul>
     {% else %}
-        <p>There is not any book related to this translator.</p>
+        <p>{% trans 'There is not any book related to this translator' %}.</p>
     {% endif %}
 </div>
 {% endblock %}

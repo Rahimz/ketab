@@ -1,14 +1,16 @@
 {% extends 'base.html' %}
 
+{% load i18n %}
+
 {% block collection_active %}active{% endblock %}
 
-{% block title %} Collection: {{ collection.name }} {% endblock %} 
+{% block title %} {% trans 'Collection' %}: {{ collection.name }} {% endblock %}
 
 {% block body %}
  
-    <p>Name: {{ collection.name }}</p>
-    <p>Code: {{ collection.item_quantity }}</p>
-    <p>Books:  {% for book in books %} <a style="padding:10px;" href="{{ book.get_absolute_url }}">{{ book }}</a> {% endfor %}</p>
+    <p>{% trans 'Name' %}: {{ collection.name }}</p>
+    <p>{% trans 'Code' %}: {{ collection.item_quantity }}</p>
+    <p>{% trans 'Books' %}:  {% for book in books %} <a style="padding:10px;" href="{{ book.get_absolute_url }}">{{ book }}</a> {% endfor %}</p>
     
         
 {% endblock %}

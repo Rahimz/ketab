@@ -1,9 +1,10 @@
 {% extends 'base.html' %}
 
+{% load i18n %}
+
 {% block book_active %}active{% endblock %}
 
-{% block title %} Books List {% endblock %} 
-
+{% block title %} {%trans 'Books List'%} {% endblock %}
 {% block body %}
  
     <ul>

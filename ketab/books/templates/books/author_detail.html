@@ -1,20 +1,22 @@
 {% extends "base.html" %}
 
+{% load i18n %}
+
 {% block basic_active %}active{% endblock %}
 
 {% block body %}
 <div>
-    <h2>Author Details</h2>
-    <p>Name: {{ author.name }}</p>
-    <p>Latin Name: {{ author.latin_name }}</p>
-    <p>Nationality: {{ author.nationality }}</p>
-    <h3>Books of {{ author.name }}</h3>
+    <h2>{% trans 'Author Details' %}</h2>
+    <p>{% trans 'Name' %}: {{ author.name }}</p>
+    <p>{% trans 'Latin Name' %}: {{ author.latin_name }}</p>
+    <p>{% trans 'Nationality' %}: {{ author.nationality }}</p>
+    <h3>{% trans 'Books of' %} {{ author.name }}</h3>
     {% if books %}
      {% for book in books %}
             <li><a href="{{ book.get_absolute_url }}">{{ book }}</a></li>
         {% endfor %}
     {% else %}
-    <p>There is not any book related to this Author.</p>
+    <p>{% trans 'There is not any book related to this Author' %}!</p>
     {% endif %}
 </div>
 {% endblock %}

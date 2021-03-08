@@ -44,19 +44,19 @@
 {% endfor %}
 
 {% endif %}
-    <button type="button" class="btn btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#market" aria-controls="market">Market Info.</button>
-    <button type="button" class="btn btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#shoora" aria-controls="shoora">Shoora Info.</button>
+    <button type="button" class="btn btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#market" aria-controls="market">{% trans 'Market Info.' %}</button>
+    <button type="button" class="btn btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#shoora" aria-controls="shoora">{% trans 'Shoora Info.' %}</button>
 
     <div id="market" class="collapse">
         {% if market %}
-         <h3>Market info</h3>
-        <p>Available: {% if market.available %}Yes{% else %}No{% endif %}</p>
-        <p>Last Price:{{ market.price }}</p>
-        <p>Last Published Year: {{ market.last_published_year }}</p>
-        <p>Last Circulation: {{ market.last_circulation }}</p>
-        <p>Updated: {{ market.updated_date }}</p>
+        <h3>{% trans 'Market info' %}</h3>
+        <p>{% trans 'Available' %}: {% if market.available %}{% trans 'Yes' %}{% else %}{% trans 'No' %}{% endif %}</p>
+        <p>{% trans 'Last Price' %}:{{ market.price }}</p>
+        <p>{% trans 'Last Published Year' %}: {{ market.last_published_year }}</p>
+        <p>{% trans 'Last Circulation' %}: {{ market.last_circulation }}</p>
+        <p>{% trans 'Updated' %}: {{ market.updated_date }}</p>
         {% else %}
-        <p class="bg-warning">There is no market info!</p>
+        <p class="bg-warning">{% trans 'There is no market info' %}!</p>
         {% endif %}
     </div>
 
@@ -64,31 +64,31 @@
     <div id="shoora" class="collapse">
         {% if shoora %}
         <hr />
-        <h3>Shoora info</h3>
-        <p>Book group: {{ shoora.book_group }}</p>
-        <p>Subject:{{ shoora.subject }}</p>
-        <p>Category: {{ shoora.category }}</p>
-        <p>Sriric: {{ shoora.satiric }}</p>
-        <p>Main character: {{ shoora.main_character }}</p>
-        <p>Main character description: {{ shoora.main_character_description }}</p>
-        <p>Point of View: {{ shoora.pov }}</p>
-        <p>Events_place: {{ shoora.events_place }}</p>
-        <p>Child special need: {{ shoora.child_special_need }}</p>
-        <p>Genre: {{ shoora.genre }}</p>
-        <p>Genre Description: {{ shoora.genre_description }}</p>
-        <p>Age Range: {{ shoora.age_from }} to {{ shoora.age_to }}</p>
-        <p>Position: {{ shoora.position }}</p>
-        <p>Book latin name: {{ shoora.book_latin_name }}</p>
-        <p>Author latin name: {{ shoora.author_latin_name }}</p>
-        <p>Language: {{ shoora.language }}</p>
-        <p>Nationality: {{ shoora.nationality }}</p>
-        <p>Score: {{ shoora.score }}</p>
-        <p>Other translations: {{ shoora.other_translation }}</p>
-        <p>Cpoyright: {{ shoora.copyright }}</p>
+        <h3>{% trans 'Shoora info' %}</h3>
+        <p>{% trans 'Book group' %}: {{ shoora.book_group }}</p>
+        <p>{% trans 'Subject' %}:{{ shoora.subject }}</p>
+        <p>{% trans 'Category' %}: {{ shoora.category }}</p>
+        <p>{% trans 'Satiric' %}: {{ shoora.satiric }}</p>
+        <p>{% trans 'Main character' %}: {{ shoora.main_character }}</p>
+        <p>{% trans 'Main character description' %}: {{ shoora.main_character_description }}</p>
+        <p>{% trans 'Point of View' %}: {{ shoora.pov }}</p>
+        <p>{% trans 'Events_place' %}: {{ shoora.events_place }}</p>
+        <p>{% trans 'Child special need' %}: {{ shoora.child_special_need }}</p>
+        <p>{% trans 'Genre' %}: {{ shoora.genre }}</p>
+        <p>{% trans 'Genre Description' %}: {{ shoora.genre_description }}</p>
+        <p>{% trans 'Age Range' %}: {{ shoora.age_from }} to {{ shoora.age_to }}</p>
+        <p>{% trans 'Position' %}: {{ shoora.position }}</p>
+        <p>{% trans 'Book latin name' %}: {{ shoora.book_latin_name }}</p>
+        <p>{% trans 'Author latin name' %}: {{ shoora.author_latin_name }}</p>
+        <p>{% trans 'Language' %}: {{ shoora.language }}</p>
+        <p>{% trans 'Nationality' %}: {{ shoora.nationality }}</p>
+        <p>{% trans 'Score' %}: {{ shoora.score }}</p>
+        <p>{% trans 'Other translations' %}: {{ shoora.other_translation }}</p>
+        <p>{% trans 'Cpoyright' %}: {{ shoora.copyright }}</p>
 
 
         {% else %}
-        <p class="bg-warning">There is no shoora info!</p>
+        <p class="bg-warning">{% trans 'There is no shoora info' %}!</p>
         {% endif %}
     </div>
 

@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-02-26 13:41+0330\n"
-"PO-Revision-Date: 2021-02-26 10:12+0000\n"
+"POT-Creation-Date: 2021-03-08 10:41+0330\n"
+"PO-Revision-Date: 2021-03-08 07:11+0000\n"
 "Last-Translator: b'Rahim Aghreb <rahim.aghareb@gmail.com>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -286,6 +286,7 @@ msgid "Home"
 msgstr "خانه"
 
 #: books/templates/base.html:39
+#: books/templates/books/collection_detail.html:13
 msgid "Books"
 msgstr "کتاب‌ها"
 
@@ -297,15 +298,16 @@ msgstr "مجموعه‌ها"
 msgid "ISBN"
 msgstr "ISBN"
 
-#: books/templates/base.html:51
+#: books/templates/base.html:51 books/templates/books/isbn_list.html:7
 msgid "ISBN List"
 msgstr "لیست ISBN"
 
-#: books/templates/base.html:52
+#: books/templates/base.html:52 books/templates/books/isbn_form.html:7
+#: books/templates/books/isbn_form.html:20
 msgid "Add ISBN"
 msgstr "اضافه کردن ISBN"
 
-#: books/templates/base.html:53
+#: books/templates/base.html:53 books/templates/books/isbn_update.html:18
 msgid "Update ISBN"
 msgstr "به روزرسانی ISBN"
 
@@ -321,11 +323,11 @@ msgstr "ثبت مشکل"
 msgid "Basic Data"
 msgstr "اطلاعات پایه"
 
-#: books/templates/base.html:66
+#: books/templates/base.html:66 books/templates/books/author_list.html:8
 msgid "Authors"
 msgstr "نویسندگان"
 
-#: books/templates/base.html:68
+#: books/templates/base.html:68 books/templates/books/translator_list.html:8
 msgid "Translators"
 msgstr "مترجمان"
 
@@ -369,7 +371,7 @@ msgstr "مدیر"
 msgid "Logout"
 msgstr "خروج"
 
-#: books/templates/base.html:110
+#: books/templates/base.html:110 books/templates/books/book_detail.html:83
 msgid "Language"
 msgstr "زبان"
 
@@ -389,39 +391,75 @@ msgstr "قوانین"
 msgid "Support"
 msgstr "پشتیبانی"
 
-#: books/templates/books/book_detail.html:7
-#, fuzzy
-#| msgid "Your profile details:"
-msgid "Book details"
-msgstr "جزییات پروفایل شما"
+#: books/templates/books/author_detail.html:9
+msgid "Author Details"
+msgstr "مشخصات نویسنده"
 
+#: books/templates/books/author_detail.html:10
 #: books/templates/books/book_detail.html:11
+#: books/templates/books/collection_detail.html:11
+#: books/templates/books/translator_detail.html:10
 msgid "Name"
 msgstr "نام"
 
+#: books/templates/books/author_detail.html:11
+#: books/templates/books/translator_detail.html:11
+msgid "Latin Name"
+msgstr "نام لاتین"
+
+#: books/templates/books/author_detail.html:12
+#: books/templates/books/book_detail.html:84
+#: books/templates/books/translator_detail.html:12
+msgid "Nationality"
+msgstr "ملیت"
+
+#: books/templates/books/author_detail.html:13
+#: books/templates/books/translator_detail.html:13
+msgid "Books of"
+msgstr "کتاب‌های "
+
+#: books/templates/books/author_detail.html:19
+msgid "There is not any book related to this Author"
+msgstr "هیچ کتابی از این نویسنده موجود نیست"
+
+#: books/templates/books/author_form.html:8
+#| msgid "Add Author"
+msgid "Add author"
+msgstr "اضافه کردن نویسنده"
+
+#: books/templates/books/author_form.html:12
+msgid "You can add an author and then you could use it in a book registering."
+msgstr ""
+"شما می‌توانید یک نویسنده اضافه کنید و در مراحل ثبت کتاب از  آن استفاده کنید"
+
+#: books/templates/books/author_form.html:18
+#: books/templates/books/author_list.html:11
+msgid "Add Author"
+msgstr "اضافه کردن نویسنده"
+
+#: books/templates/books/author_list.html:14
+msgid "List of Authors"
+msgstr "لیست نویسندگان"
+
+#: books/templates/books/book_detail.html:7
+msgid "Book details"
+msgstr "مشخصات کتاب"
+
 #: books/templates/books/book_detail.html:13
-#, fuzzy
-#| msgid "Authors"
 msgid "Author"
-msgstr "نویسندگان"
+msgstr "نویسنده"
 
 #: books/templates/books/book_detail.html:14
-#, fuzzy
-#| msgid "Translators"
 msgid "Translator"
-msgstr "مترجمان"
+msgstr "مترجم"
 
 #: books/templates/books/book_detail.html:15
-#, fuzzy
-#| msgid "Ilustrators"
 msgid "Illustrated"
-msgstr "تصویرگران"
+msgstr "مصور"
 
 #: books/templates/books/book_detail.html:16
-#, fuzzy
-#| msgid "Ilustrators"
 msgid "Illustrator"
-msgstr "تصویرگران"
+msgstr "تصویرگر"
 
 #: books/templates/books/book_detail.html:17
 msgid "Editor"
@@ -432,22 +470,17 @@ msgid "Re-Write"
 msgstr "بازنویسی"
 
 #: books/templates/books/book_detail.html:19
-#, fuzzy
-#| msgid "Collections"
 msgid "Collector"
-msgstr "مجموعه‌ها"
+msgstr "جمع کننده"
 
 #: books/templates/books/book_detail.html:20
-#, fuzzy
-#| msgid "Collections"
 msgid "Is a Collection"
-msgstr "مجموعه‌ها"
+msgstr "مجموعه است"
 
 #: books/templates/books/book_detail.html:21
-#, fuzzy
-#| msgid "Collections"
+#: books/templates/books/collection_detail.html:7
 msgid "Collection"
-msgstr "مجموعه‌ها"
+msgstr "مجموعه‌"
 
 #: books/templates/books/book_detail.html:22
 msgid "Number in series"
@@ -462,16 +495,12 @@ msgid "Publisher sub-category"
 msgstr "زیرمجموعه ناشر"
 
 #: books/templates/books/book_detail.html:26
-#, fuzzy
-#| msgid "Publisher"
 msgid "Publisher 2"
-msgstr "ناشران"
+msgstr "ناشر ۲"
 
 #: books/templates/books/book_detail.html:27
-#, fuzzy
-#| msgid "Publisher"
 msgid "Publishing Year"
-msgstr "ناشران"
+msgstr "سال نشر"
 
 #: books/templates/books/book_detail.html:29
 msgid "Pages"
@@ -490,12 +519,145 @@ msgid "Tags"
 msgstr "برچسب‌ها"
 
 #: books/templates/books/book_detail.html:33
+#: books/templates/books/book_detail.html:77
 msgid "Genre"
 msgstr "ژانر"
 
 #: books/templates/books/book_detail.html:39
 msgid "Critiques"
 msgstr "نقدها"
+
+#: books/templates/books/book_detail.html:47
+msgid "Market Info."
+msgstr "اطلاعات بازار"
+
+#: books/templates/books/book_detail.html:48
+msgid "Shoora Info."
+msgstr "اطلاعات کتاب شورا"
+
+#: books/templates/books/book_detail.html:52
+msgid "Market info"
+msgstr "اطلاعات بازار"
+
+#: books/templates/books/book_detail.html:53
+msgid "Available"
+msgstr "موجود"
+
+#: books/templates/books/book_detail.html:53
+msgid "Yes"
+msgstr "بله"
+
+#: books/templates/books/book_detail.html:53
+msgid "No"
+msgstr "نه"
+
+#: books/templates/books/book_detail.html:54
+msgid "Last Price"
+msgstr "آخرین قیمت"
+
+#: books/templates/books/book_detail.html:55
+msgid "Last Published Year"
+msgstr "آخرین سال انتشار"
+
+#: books/templates/books/book_detail.html:56
+msgid "Last Circulation"
+msgstr "آخرین شمارگان"
+
+#: books/templates/books/book_detail.html:57
+msgid "Updated"
+msgstr "به روز رسانی"
+
+#: books/templates/books/book_detail.html:59
+msgid "There is no market info"
+msgstr "اطلاعات بازار وجود ندارد"
+
+#: books/templates/books/book_detail.html:67
+msgid "Shoora info"
+msgstr "اطلاعات کتاب شورا"
+
+#: books/templates/books/book_detail.html:68
+msgid "Book group"
+msgstr "گروه‌های کتاب"
+
+#: books/templates/books/book_detail.html:69
+msgid "Subject"
+msgstr "موضوع"
+
+#: books/templates/books/book_detail.html:70
+msgid "Category"
+msgstr "دسته‌بندی"
+
+#: books/templates/books/book_detail.html:71
+msgid "Satiric"
+msgstr "طنز"
+
+#: books/templates/books/book_detail.html:72
+msgid "Main character"
+msgstr "شخصیت اصلی"
+
+#: books/templates/books/book_detail.html:73
+msgid "Main character description"
+msgstr "توصیف شخصیت اصلی"
+
+#: books/templates/books/book_detail.html:74
+msgid "Point of View"
+msgstr "زاویه دید"
+
+#: books/templates/books/book_detail.html:75
+msgid "Events_place"
+msgstr "محل وقوع"
+
+#: books/templates/books/book_detail.html:76
+msgid "Child special need"
+msgstr "نیازهای ویژه کودک"
+
+#: books/templates/books/book_detail.html:78
+msgid "Genre Description"
+msgstr "توصیف ژانر"
+
+#: books/templates/books/book_detail.html:79
+msgid "Age Range"
+msgstr "رده سنی"
+
+#: books/templates/books/book_detail.html:80
+msgid "Position"
+msgstr "موقعیت"
+
+#: books/templates/books/book_detail.html:81
+msgid "Book latin name"
+msgstr "نام لاتین کتاب"
+
+#: books/templates/books/book_detail.html:82
+msgid "Author latin name"
+msgstr "نام لاتین نویسنده"
+
+#: books/templates/books/book_detail.html:85
+msgid "Score"
+msgstr "امتیاز"
+
+#: books/templates/books/book_detail.html:86
+msgid "Other translations"
+msgstr "ترجمه‌های دیگر"
+
+#: books/templates/books/book_detail.html:87
+msgid "Cpoyright"
+msgstr "کپی رایت"
+
+#: books/templates/books/book_detail.html:91
+msgid "There is no shoora info"
+msgstr "اطلاعات شورای کتاب موجود نیست "
+
+#: books/templates/books/books_list.html:7
+msgid "Books List"
+msgstr "لیست کتاب‌ها"
+
+#: books/templates/books/collection_detail.html:12
+msgid "Code"
+msgstr "کد"
+
+#: books/templates/books/collections_list.html:7
+msgid "Collections List"
+msgstr "لیست مجموعه‌ها"
 
 #: books/templates/books/home.html:7
 msgid "Home Pgae"
@@ -506,6 +668,96 @@ msgstr "خانه"
 msgid "Hello %(name)s!"
 msgstr " %(name)s سلام!"
 
+#: books/templates/books/isbn_confirm_delete.html:9
+msgid "Delete Author"
+msgstr "حذف نویسنده"
+
+#: books/templates/books/isbn_confirm_delete.html:11
+msgid "Are you sure you want to delete the ISBN"
+msgstr "آیا مطمئن هستید که این ISBN حذف شود"
+
+#: books/templates/books/isbn_confirm_delete.html:12
+msgid "NOTE"
+msgstr "نکته"
+
+#: books/templates/books/isbn_confirm_delete.html:12
+msgid ""
+"All of the book details which is related to this ISBN will be removed "
+"permanently"
+msgstr ""
+"تمام اطلاعات کتاب که به این ISBN مرتبط باشد به صورت دائمی حذف خواهد شد"
+
+#: books/templates/books/isbn_confirm_delete.html:16
+msgid "Yes, delete."
+msgstr "بله، حذف شود"
+
+#: books/templates/books/isbn_detail.html:9
+msgid "ISBN Details"
+msgstr "جزییات ISBN"
+
+#: books/templates/books/isbn_detail.html:20
+msgid "There is no book related to this ISBN"
+msgstr "هیچ کتابی به این ISBN مرتبط نشده است"
+
+#: books/templates/books/isbn_form.html:12
+#: books/templates/books/isbn_update.html:10
+msgid "The ISBN is the most important identification for a book"
+msgstr "کد ISBN مهم‌ترین شناسه معرفی کتاب است "
+
+#: books/templates/books/isbn_form.html:13
+msgid ""
+"The structure of its 13-digits character xxx-xx-xxxx-xxx-x or the older "
+"10-digits is xx-xxxx-xxx-x "
+msgstr ""
+"ساختار این کد یک عدد ۱۳ رقمی به شکل xxx-xx-xxxx-xxx-x است مدل‌های قدیمی‌تر "
+"آن ترکیبی ۱۰ رقمی به این شکل xx-xxxx-xxx-x  دارند"
+
+#: books/templates/books/isbn_form.html:14
+#: books/templates/books/isbn_update.html:12
+msgid ""
+"If you do not know hoe to define an ISBN you should contanct the "
+"administration of Website"
+msgstr ""
+"اگر کتاب مورد نظر شما ISBN ندارد یا شما کد آن را نمی‌دانید حتماً با مدیر "
+"سایت تماس بگیرید"
+
+#: books/templates/books/isbn_update.html:11
+msgid ""
+"The structure of its 13-digits character xxx-xx-xxxx-xxx-x or the older "
+"10-digits is xx-xxxx-xxx-x"
+msgstr ""
+"ساختار این کد یک عدد ۱۳ رقمی به شکل xxx-xx-xxxx-xxx-x است مدل‌های قدیمی‌تر "
+"آن ترکیبی ۱۰ رقمی به این شکل xx-xxxx-xxx-x  دارند"
+
+#: books/templates/books/translator_detail.html:9
+msgid "Translator Details"
+msgstr "مشخصات مترجم"
+
+#: books/templates/books/translator_detail.html:21
+msgid "There is not any book related to this translator"
+msgstr "هیچ کتابی برای این مترجم ثبت نشده است"
+
+#: books/templates/books/translator_form.html:8
+#| msgid "Add Translator"
+msgid "Add translator"
+msgstr "اضافه کردن مترجم"
+
+#: books/templates/books/translator_form.html:12
+msgid ""
+"You can add a translator and then you could use it in a book registering"
+msgstr ""
+"شما می‌توانید یک مترجم ثبت کنید و در هنگام ثبت مشخصات کتاب از آن استفاده "
+"کنید"
+
+#: books/templates/books/translator_form.html:18
+#: books/templates/books/translator_list.html:11
+msgid "Add Translator"
+msgstr "اضافه کردن مترجم"
+
+#: books/templates/books/translator_list.html:14
+msgid "List of translators"
+msgstr "لیست مترجمان"
+
 #: ketab/settings.py:115
 msgid "English"
 msgstr "انگلیسی"
@@ -513,3 +765,15 @@ msgstr "انگلیسی"
 #: ketab/settings.py:116
 msgid "Farsi"
 msgstr "فارسی"
+
+#~ msgid "Add an author"
+#~ msgstr "اضافه کردن یک نویسنده"
+
+#~ msgid "Add an Author"
+#~ msgstr "اضافه کردن یک نویسنده"
+
+#~ msgid "Add an translator"
+#~ msgstr "اضافه کردن یک مترجم"
+
+#~ msgid "Add a Translator"
+#~ msgstr "اضافه کردن یک مترجم"
