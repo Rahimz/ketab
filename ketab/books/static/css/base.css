@@ -29,3 +29,9 @@ body {
     float:left;
     margin:0;
 }
+
+
+/* sidebar */
+#page-content-wrapper {
+  min-width: 100vw;
+}

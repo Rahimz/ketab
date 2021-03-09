@@ -46,52 +46,10 @@
                         <a class="nav-link {% block collection_active %}{% endblock %}"
                            href="{% url 'collectionlist' %}">{% trans 'Collections' %}</a>
                     </li>
-                    {# the staff part of navbar #} {% if request.user.is_staff %}
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle {% block isbn_active %}{% endblock %}" href="#"
-                           id="isbnDropdown" role="button" data-bs-toggle="dropdown"
-                           aria-expanded="false"> {% trans 'ISBN' %} </a>
-                        <ul class="dropdown-menu" aria-labelledby="isbnDropdown">
-                            <li><a class="dropdown-item" href="{% url 'isbn_list' %}">{% trans 'ISBN List' %}</a></li>
-                            <li><a class="dropdown-item" href="{% url 'isbn-create' %}">{% trans 'Add ISBN' %}</a></li>
-                            <li><a class="dropdown-item disabled" href="#">{% trans 'Update ISBN' %}</a></li>
-                            <li><a class="dropdown-item disabled" href="#">{% trans 'Delete ISBN' %}</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item disabled" href="#">{% trans 'Add an Issue' %}</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle {% block basic_active %}{% endblock %}" href="#"
-                           id="basicDataDropdown" role="button" data-bs-toggle="dropdown"
-                           aria-expanded="false"> {% trans 'Basic Data' %} </a>
-                        <ul class="dropdown-menu" aria-labelledby="basicDataDropdown">
-                            <li><a class="dropdown-item" href="{% url 'author_list' %}">{% trans 'Authors' %}</a></li>
-                            <li><a class="dropdown-item"
-                                   href="{% url 'translator_list' %}">{% trans 'Translators' %}</a></li>
-                            <li><a class="dropdown-item disabled" href="#">{% trans 'Ilustrators' %}</a></li>
-                            <li><a class="dropdown-item disabled" href="#">{% trans 'Publisher' %}</a></li>
-                            <li><a class="dropdown-item disabled" href="#">{% trans 'Prizes' %}</a></li>
-                            <li><a class="dropdown-item disabled" href="#">{% trans 'Market Info' %}</a></li>
-                            <li><a class="dropdown-item disabled" href="#">{% trans 'Shoora Book Groups' %}</a></li>
-                            <li><a class="dropdown-item disabled" href="#">{% trans 'Shoora Book Info' %}</a></li>
-                            <li><a class="dropdown-item disabled" href="#">{% trans 'Content Info' %}</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item disabled" href="#">{% trans 'Add an Issue' %}</a></li>
-                        </ul>
-                    </li>
 
-
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#" tabindex="-1"
-                           aria-disabled="true">{% trans 'Reports' %}</a>
-                    </li>
-                    {% endif %} {# The Admin part of navbar #} {% if request.user.is_superuser %}
-                    <li class="class=" nav-item
-                    ""> <a class="nav-link" href="{% url 'admin:index' %}">{% trans 'Admin' %}</a></li>{% endif %}
+                    {# The Admin part of navbar #}
+                    {% if request.user.is_superuser %}
+                    <li class="nav-item"> <a class="nav-link" href="{% url 'admin:index' %}">{% trans 'Admin' %}</a></li>{% endif %}
 
                     {% if request.user.is_authenticated %}
                     <li class="nav-item">
@@ -130,9 +88,57 @@
 </header>
 
 <main>
-    <div class="cotainer p-3">
+     {# the staff part of navbar #}
+    {% if request.user.is_staff %}
+    <div class="d-flex">
+        <div class="bg-light border-right" id="sidebar-wrapper">
+            <div class="sidebar-heading">{% trans 'Admin Panel' %}</div>
+            <div class="list-group list-group-flush">
+                <a class="nav-link dropdown-toggle {% block isbn_active %}{% endblock %} list-group-item list-group-item-action bg-light" href="#" id="isbnDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    {% trans 'ISBN' %}
+                </a>
+                    <ul class="dropdown-menu" aria-labelledby="isbnDropdown">
+                        <li><a class="dropdown-item" href="{% url 'isbn_list' %}">{% trans 'ISBN List' %}</a></li>
+                        <li><a class="dropdown-item" href="{% url 'isbn-create' %}">{% trans 'Add ISBN' %}</a></li>
+                        <li><a class="dropdown-item disabled" href="#">{% trans 'Update ISBN' %}</a></li>
+                        <li><a class="dropdown-item disabled" href="#">{% trans 'Delete ISBN' %}</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item disabled" href="#">{% trans 'Add an Issue' %}</a></li>
+                    </ul>
+            <a class="nav-link dropdown-toggle {% block basic_active %}{% endblock %} " href="#"
+                           id="basicDataDropdown" role="button" data-bs-toggle="dropdown"
+                           aria-expanded="false"> {% trans 'Basic Data' %} </a>
+                        <ul class="dropdown-menu" aria-labelledby="basicDataDropdown">
+                            <li><a class="dropdown-item" href="{% url 'author_list' %}">{% trans 'Authors' %}</a></li>
+                            <li><a class="dropdown-item"
+                                   href="{% url 'translator_list' %}">{% trans 'Translators' %}</a></li>
+                            <li><a class="dropdown-item disabled" href="#">{% trans 'Ilustrators' %}</a></li>
+                            <li><a class="dropdown-item disabled" href="#">{% trans 'Publisher' %}</a></li>
+                            <li><a class="dropdown-item disabled" href="#">{% trans 'Prizes' %}</a></li>
+                            <li><a class="dropdown-item disabled" href="#">{% trans 'Market Info' %}</a></li>
+                            <li><a class="dropdown-item disabled" href="#">{% trans 'Shoora Book Groups' %}</a></li>
+                            <li><a class="dropdown-item disabled" href="#">{% trans 'Shoora Book Info' %}</a></li>
+                            <li><a class="dropdown-item disabled" href="#">{% trans 'Content Info' %}</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item disabled" href="#">{% trans 'Add an Issue' %}</a></li>
+                        </ul>
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">{% trans 'Reports' %}</a>
+            </div>
+    </div>
+    {% endif %}
+    {# end of staff part of navbar #}
+
+
+    <div class="cotainer p-3 ">
+        <div class="container-fluid">
         <h2> {% block title %}{% endblock %} </h2>
         {% block body %} {% endblock %}
+        </div>
+    </div>
     </div>
 
 </main>
