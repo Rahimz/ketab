@@ -92,10 +92,10 @@
     {% if request.user.is_staff %}
     <div class="d-flex" id="wrapper">
         <div class="" id="sidebar-wrapper">
-            <div class="list-group">
+            <div class="list-group ">
                 <li class="list-group-item">{% trans 'Admin Panel' %}</li>
 
-                <a class="list-group-item dropdown-toggle {% block isbn_active %}{% endblock %} " href="#" id="isbnDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="list-group-item list-group-item-action list-group-item-info dropdown-toggle {% block isbn_active %}{% endblock %} " href="#" id="isbnDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     {% trans 'ISBN' %}
                 </a>
                     <ul class="dropdown-menu" aria-labelledby="isbnDropdown">
@@ -108,7 +108,7 @@
                         </li>
                         <li><a class="dropdown-item disabled" href="#">{% trans 'Add an Issue' %}</a></li>
                     </ul>
-                <a class="list-group-item dropdown-toggle {% block basic_active %}{% endblock %} " href="#" id="basicDataDropdown" role="button" data-bs-toggle="dropdown"
+                <a class="list-group-item list-group-item-action list-group-item-info dropdown-toggle {% block basic_active %}{% endblock %} " href="#" id="basicDataDropdown" role="button" data-bs-toggle="dropdown"
                            aria-expanded="false"> {% trans 'Basic Data' %} </a>
                         <ul class="dropdown-menu" aria-labelledby="basicDataDropdown">
                             <li><a class="dropdown-item" href="{% url 'author_list' %}">{% trans 'Authors' %}</a></li>
@@ -118,15 +118,15 @@
                             <li><a class="dropdown-item disabled" href="#">{% trans 'Publisher' %}</a></li>
                             <li><a class="dropdown-item disabled" href="#">{% trans 'Prizes' %}</a></li>
                             <li><a class="dropdown-item disabled" href="#">{% trans 'Market Info' %}</a></li>
-                            <li><a class="dropdown-item disabled" href="#">{% trans 'Shoora Book Groups' %}</a></li>
-                            <li><a class="dropdown-item disabled" href="#">{% trans 'Shoora Book Info' %}</a></li>
                             <li><a class="dropdown-item disabled" href="#">{% trans 'Content Info' %}</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
                             <li><a class="dropdown-item disabled" href="#">{% trans 'Add an Issue' %}</a></li>
                         </ul>
-              <a class="list-group-item disabled" href="#" tabindex="-1" aria-disabled="true">{% trans 'Reports' %}</a>
+              <a class="list-group-item list-group-item-action list-group-item-info " href="#" tabindex="-1" aria-disabled="true">{% trans 'Reports' %}</a>
+              <a class="list-group-item list-group-item-action list-group-item-info " href="#" tabindex="-1" aria-disabled="true">{% trans 'Shoora Book Info' %}</a>
+              <a class="list-group-item list-group-item-action list-group-item-info " href="#" tabindex="-1" aria-disabled="true">{% trans 'Shoora Book Groups' %}</a>
 
             </div>
     </div>
