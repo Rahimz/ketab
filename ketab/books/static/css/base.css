@@ -63,3 +63,17 @@ body {
     margin-left: -15rem;
   }
 }
+
+/* sidebar-link */
+.sidebar-link {
+    padding: .5rem;
+    margin: .1rem;
+}
+.sidebar-link {
+    text-decoration: none;
+    color: grey;
+}
+.sidebar-link:hover {
+    background-color: #e3f2fd;
+    color: black;
+}

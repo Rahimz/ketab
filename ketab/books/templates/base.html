@@ -94,7 +94,7 @@
         <div class="bg-light border-right" id="sidebar-wrapper">
             <div class="sidebar-heading">{% trans 'Admin Panel' %}</div>
             <div class="list-group list-group-flush">
-                <a class="nav-link dropdown-toggle {% block isbn_active %}{% endblock %} list-group-item list-group-item-action bg-light" href="#" id="isbnDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="sidebar-link dropdown-toggle {% block isbn_active %}{% endblock %} " href="#" id="isbnDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     {% trans 'ISBN' %}
                 </a>
                     <ul class="dropdown-menu" aria-labelledby="isbnDropdown">
@@ -107,7 +107,7 @@
                         </li>
                         <li><a class="dropdown-item disabled" href="#">{% trans 'Add an Issue' %}</a></li>
                     </ul>
-            <a class="nav-link dropdown-toggle {% block basic_active %}{% endblock %} " href="#"
+            <a class="sidebar-link dropdown-toggle {% block basic_active %}{% endblock %} " href="#"
                            id="basicDataDropdown" role="button" data-bs-toggle="dropdown"
                            aria-expanded="false"> {% trans 'Basic Data' %} </a>
                         <ul class="dropdown-menu" aria-labelledby="basicDataDropdown">
@@ -126,7 +126,7 @@
                             </li>
                             <li><a class="dropdown-item disabled" href="#">{% trans 'Add an Issue' %}</a></li>
                         </ul>
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">{% trans 'Reports' %}</a>
+              <a class="sidebar-link disabled" href="#" tabindex="-1" aria-disabled="true">{% trans 'Reports' %}</a>
             </div>
     </div>
     {% endif %}
