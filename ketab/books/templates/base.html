@@ -92,13 +92,26 @@
     {% if request.user.is_staff %}
     <div class="d-flex" id="wrapper">
         <div class="" id="sidebar-wrapper">
-            <div class="list-group ">
-                <li class="list-group-item">{% trans 'Admin Panel' %}</li>
 
-                <a class="list-group-item list-group-item-action list-group-item-info dropdown-toggle {% block isbn_active %}{% endblock %} " href="#" id="isbnDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <!--        Acordion menu start -->
+            <div class="accordion" style="width:250px;" id="accordionExample">
+                <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                  <button class="accordion-button " disabled type="" data-bs-toggle="" data-bs-target="" aria-expanded="true" aria-controls="">
+                    {% trans 'Admin Panel' %}
+                  </button>
+                </h2>
+
+              </div> <!-- end of accordion item -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                     {% trans 'ISBN' %}
-                </a>
-                    <ul class="dropdown-menu" aria-labelledby="isbnDropdown">
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <ul class="" aria-labelledby="">
                         <li><a class="dropdown-item" href="{% url 'isbn_list' %}">{% trans 'ISBN List' %}</a></li>
                         <li><a class="dropdown-item" href="{% url 'isbn-create' %}">{% trans 'Add ISBN' %}</a></li>
                         <li><a class="dropdown-item disabled" href="#">{% trans 'Update ISBN' %}</a></li>
@@ -108,9 +121,18 @@
                         </li>
                         <li><a class="dropdown-item disabled" href="#">{% trans 'Add an Issue' %}</a></li>
                     </ul>
-                <a class="list-group-item list-group-item-action list-group-item-info dropdown-toggle {% block basic_active %}{% endblock %} " href="#" id="basicDataDropdown" role="button" data-bs-toggle="dropdown"
-                           aria-expanded="false"> {% trans 'Basic Data' %} </a>
-                        <ul class="dropdown-menu" aria-labelledby="basicDataDropdown">
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    {% trans 'Basic Data' %}
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <ul class="" aria-labelledby="">
                             <li><a class="dropdown-item" href="{% url 'author_list' %}">{% trans 'Authors' %}</a></li>
                             <li><a class="dropdown-item"
                                    href="{% url 'translator_list' %}">{% trans 'Translators' %}</a></li>
@@ -124,12 +146,40 @@
                             </li>
                             <li><a class="dropdown-item disabled" href="#">{% trans 'Add an Issue' %}</a></li>
                         </ul>
-              <a class="list-group-item list-group-item-action list-group-item-info " href="#" tabindex="-1" aria-disabled="true">{% trans 'Reports' %}</a>
-              <a class="list-group-item list-group-item-action list-group-item-info " href="#" tabindex="-1" aria-disabled="true">{% trans 'Shoora Book Info' %}</a>
-              <a class="list-group-item list-group-item-action list-group-item-info " href="#" tabindex="-1" aria-disabled="true">{% trans 'Shoora Book Groups' %}</a>
-
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    {% trans 'Reports' %}
+                  </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+<!--                    NO reports yet -->
+                  </div>
+                </div>
+              </div> <!-- end of accordion item -->
+                <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    {% trans 'Shoora Book Info' %}
+                  </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <ul class="" aria-labelledby="">
+                        <li><a class="dropdown-item" href="#">{% trans 'Shoora Book Groups' %}</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div> <!-- end of accordion item -->
             </div>
+<!--        Acordion Menu ends-->
     </div>
+
+
     {% endif %}
     {# end of staff part of navbar #}
 
