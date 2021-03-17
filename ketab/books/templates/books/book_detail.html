@@ -55,7 +55,7 @@
         {% if market %}
         <h3>{% trans 'Market info' %}</h3>
         <p>{% trans 'Available' %}: {% if market.available %}{% trans 'Yes' %}{% else %}{% trans 'No' %}{% endif %}</p>
-        <p>{% trans 'Last Price' %}:{{ market.price }}</p>
+        <p>{% trans 'Last Price' %}:{{ market.last_price }}</p>
         <p>{% trans 'Last Published Year' %}: {{ market.last_published_year }}</p>
         <p>{% trans 'Last Circulation' %}: {{ market.last_circulation }}</p>
         <p>{% trans 'Updated' %}: {{ market.updated_date }}</p>
