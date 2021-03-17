@@ -4,6 +4,10 @@
 
 {% block book_active %}active{% endblock %}
 
+{% block basic-aria %}true{% endblock %}
+
+{% block basic-show %}show{% endblock %}
+
 {% block title %} {%trans 'Books List'%} {% endblock %}
 {% block body %}
      {% if request.user.is_staff %}
