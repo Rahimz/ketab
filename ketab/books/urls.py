@@ -23,4 +23,8 @@ urlpatterns = [
     path('translators/', views.TranslatorList.as_view(), name='translator_list'),
     path('translators/create/', views.TranslatorCreate.as_view(), name='translator_create'),
     path('translators/<int:pk>', views.TranslatorDetail, name='translator_detail'),
+
+    path('illustrator/', views.IllustratorList.as_view(), name='illustrator_list'),
+    path('illustrator/create/', views.IllustratorCreate.as_view(), name='illustrator_create'),
+    path('illustrator/<int:pk>', views.IllustratorDetail, name='illustrator_detail'),
     ]

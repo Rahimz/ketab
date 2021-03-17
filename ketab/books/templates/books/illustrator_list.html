@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+
+{% block basic_active %}active{% endblock %}
+
+{% block body %}
+<h2>{% trans 'Illustrators' %}</h2>
+<div class="row">
+    <p>
+    <a href="{% url 'illustrator_create' %}" class="btn btn-outline-secondary">{% trans 'Add Illustrator' %}</a>
+    </p>
+</div>
+<h3>{% trans 'List of illustrators' %}</h3>
+<ul>
+    {% for illustrator in object_list %}
+    <li><a href="{% url 'illustrator_detail' illustrator.pk %}">{{ illustrator.name }}</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}

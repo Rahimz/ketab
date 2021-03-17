@@ -13,9 +13,11 @@
 
     {% comment %}
     <!-- CSS for LTR format   -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     {% endcomment %}
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.rtl.min.css" integrity="sha384-4dNpRvNX0c/TdYEbYup8qbjvjaMrgUPh+g4I03CnNtANuv+VAvPL6LqdwzZKV38G" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.rtl.min.css"
+          integrity="sha384-4dNpRvNX0c/TdYEbYup8qbjvjaMrgUPh+g4I03CnNtANuv+VAvPL6LqdwzZKV38G" crossorigin="anonymous">
 
     <link href="{% static 'css/base.css' %}" rel="stylesheet">
 
@@ -47,9 +49,9 @@
                            href="{% url 'collectionlist' %}">{% trans 'Collections' %}</a>
                     </li>
 
-                    {# The Admin part of navbar #}
-                    {% if request.user.is_superuser %}
-                    <li class="nav-item"> <a class="nav-link" href="{% url 'admin:index' %}">{% trans 'Admin' %}</a></li>{% endif %}
+                    {# The Admin part of navbar #} {% if request.user.is_superuser %}
+                    <li class="nav-item"><a class="nav-link" href="{% url 'admin:index' %}">{% trans 'Admin' %}</a></li>
+                    {% endif %}
 
                     {% if request.user.is_authenticated %}
                     <li class="nav-item">
@@ -65,9 +67,7 @@
                         <a class="nav-link" href="{% url 'login' %}">{% trans 'Log-in' %}</a> {% endif %}
                     </li>
                 </ul>
-                {% get_current_language as LANGUAGE_CODE %}
-                {% get_available_languages as LANGUAGES %}
-                {% get_language_info_list for LANGUAGES as languages %}
+                {% get_current_language as LANGUAGE_CODE %} {% get_available_languages as LANGUAGES %} {% get_language_info_list for LANGUAGES as languages %}
                 <div class="languages">
                     <p>{% trans "Language" %}:</p>
                     <ul class="languages">
@@ -88,113 +88,122 @@
 </header>
 
 <main>
-     {# the staff part of navbar #}
-    {% if request.user.is_staff %}
+    {# the staff part of navbar #} {% if request.user.is_staff %}
     <div class="d-flex" id="wrapper">
         <div class="" id="sidebar-wrapper">
 
             <!--        Acordion menu start -->
             <div class="accordion" style="width:250px;" id="accordionExample">
                 <div class="accordion-item">
-                <h2 class="accordion-header" id="headingThree">
-                  <button class="accordion-button " disabled type="" data-bs-toggle="" data-bs-target="" aria-expanded="true" aria-controls="">
-                    {% trans 'Admin Panel' %}
-                  </button>
-                </h2>
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button " disabled type="" data-bs-toggle="" data-bs-target=""
+                                aria-expanded="true" aria-controls="">
+                            {% trans 'Admin Panel' %}
+                        </button>
+                    </h2>
 
-              </div> <!-- end of accordion item -->
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingOne">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    {% trans 'ISBN' %}
-                  </button>
-                </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    <ul class="" aria-labelledby="">
-                        <li><a class="dropdown-item" href="{% url 'isbn_list' %}">{% trans 'ISBN List' %}</a></li>
-                        <li><a class="dropdown-item" href="{% url 'isbn-create' %}">{% trans 'Add ISBN' %}</a></li>
-                        <li><a class="dropdown-item disabled" href="#">{% trans 'Update ISBN' %}</a></li>
-                        <li><a class="dropdown-item disabled" href="#">{% trans 'Delete ISBN' %}</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item disabled" href="#">{% trans 'Add an Issue' %}</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingTwo">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    {% trans 'Basic Data' %}
-                  </button>
-                </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    <ul class="" aria-labelledby="">
-                            <li><a class="dropdown-item" href="{% url 'author_list' %}">{% trans 'Authors' %}</a></li>
-                            <li><a class="dropdown-item"
-                                   href="{% url 'translator_list' %}">{% trans 'Translators' %}</a></li>
-                            <li><a class="dropdown-item disabled" href="#">{% trans 'Ilustrators' %}</a></li>
-                            <li><a class="dropdown-item disabled" href="#">{% trans 'Publisher' %}</a></li>
-                            <li><a class="dropdown-item disabled" href="#">{% trans 'Prizes' %}</a></li>
-                            <li><a class="dropdown-item disabled" href="#">{% trans 'Market Info' %}</a></li>
-                            <li><a class="dropdown-item disabled" href="#">{% trans 'Content Info' %}</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item disabled" href="#">{% trans 'Add an Issue' %}</a></li>
-                        </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingThree">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    {% trans 'Reports' %}
-                  </button>
-                </h2>
-                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-<!--                    NO reports yet -->
-                  </div>
-                </div>
-              </div> <!-- end of accordion item -->
+                </div> <!-- end of accordion item -->
                 <div class="accordion-item">
-                <h2 class="accordion-header" id="headingFour">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                    {% trans 'Shoora Book Info' %}
-                  </button>
-                </h2>
-                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    <ul class="" aria-labelledby="">
-                        <li><a class="dropdown-item" href="#">{% trans 'Shoora Book Groups' %}</a></li>
-                    </ul>
-                  </div>
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            {% trans 'ISBN' %}
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                         data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <ul class="" aria-labelledby="">
+                                <li><a class="dropdown-item" href="{% url 'isbn_list' %}">{% trans 'ISBN List' %}</a>
+                                </li>
+                                <li><a class="dropdown-item" href="{% url 'isbn-create' %}">{% trans 'Add ISBN' %}</a>
+                                </li>
+                                <li><a class="dropdown-item disabled" href="#">{% trans 'Update ISBN' %}</a></li>
+                                <li><a class="dropdown-item disabled" href="#">{% trans 'Delete ISBN' %}</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item disabled" href="#">{% trans 'Add an Issue' %}</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-              </div> <!-- end of accordion item -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            {% trans 'Basic Data' %}
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                         data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <ul class="" aria-labelledby="">
+                                <li><a class="dropdown-item" href="{% url 'author_list' %}">{% trans 'Authors' %}</a>
+                                </li>
+                                <li><a class="dropdown-item" href="{% url 'translator_list' %}">{% trans 'Translators' %}</a></li>
+                                <li><a class="dropdown-item" href="{% url 'illustrator_list' %}">{% trans 'Ilustrators' %}</a></li>
+                                <li><a class="dropdown-item disabled" href="#">{% trans 'Publisher' %}</a></li>
+                                <li><a class="dropdown-item disabled" href="#">{% trans 'Prizes' %}</a></li>
+                                <li><a class="dropdown-item disabled" href="#">{% trans 'Market Info' %}</a></li>
+                                <li><a class="dropdown-item disabled" href="#">{% trans 'Content Info' %}</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item disabled" href="#">{% trans 'Add an Issue' %}</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            {% trans 'Reports' %}
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                         data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <!--                    NO reports yet -->
+                        </div>
+                    </div>
+                </div> <!-- end of accordion item -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            {% trans 'Shoora Book Info' %}
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                         data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <ul class="" aria-labelledby="">
+                                <li><a class="dropdown-item" href="#">{% trans 'Shoora Book Groups' %}</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> <!-- end of accordion item -->
             </div>
-<!--        Acordion Menu ends-->
-    </div>
-
-
-    {% endif %}
-    {# end of staff part of navbar #}
-
-
-    <div class="cotainer p-3 ">
-        {% comment %}
-<!--        TODO: Find the propper script -->
-<!--        the script for button does not work because it could not find propper script-->
-        <button class="btn btn-primary" id="menu-toggle">Menu</button>
-        {% endcomment %}
-        <div class="container-fluid">
-        <h2> {% block title %}{% endblock %} </h2>
-        {% block body %} {% endblock %}
+            <!--        Acordion Menu ends-->
         </div>
-    </div>
+
+
+        {% endif %} {# end of staff part of navbar #}
+
+
+        <div class="cotainer p-3 ">
+            {% comment %}
+            <!--        TODO: Find the propper script -->
+            <!--        the script for button does not work because it could not find propper script-->
+            <button class="btn btn-primary" id="menu-toggle">Menu</button>
+            {% endcomment %}
+            <div class="container-fluid">
+                <h2> {% block title %}{% endblock %} </h2>
+                {% block body %} {% endblock %}
+            </div>
+        </div>
     </div>
     </div>
 
@@ -221,12 +230,13 @@
         crossorigin="anonymous"></script>
 
 <!-- Menu Toggle Script -->
-  <script>
+<script>
     $("#menu-toggle").click(function(e) {
       e.preventDefault();
       $("#wrapper").toggleClass("toggled");
     });
-  </script>
+
+</script>
 
 
 </body>

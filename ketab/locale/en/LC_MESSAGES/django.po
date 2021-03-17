@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-08 10:41+0330\n"
+"POT-Creation-Date: 2021-03-17 09:09+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33,7 +33,7 @@ msgstr ""
 #: account/templates/account/create_profile.html:5
 #: account/templates/account/dashboard.html:7
 #: account/templates/account/dashboard.html:14
-#: account/templates/account/edit.html:5 books/templates/base.html:95
+#: account/templates/account/edit.html:5 books/templates/base.html:60
 msgid "Dashboard"
 msgstr ""
 
@@ -159,7 +159,7 @@ msgstr ""
 
 #: account/templates/registration/login.html:7
 #: account/templates/registration/login.html:14
-#: account/templates/registration/login.html:34 books/templates/base.html:103
+#: account/templates/registration/login.html:34 books/templates/base.html:68
 msgid "Log-in"
 msgstr ""
 
@@ -269,116 +269,120 @@ msgstr ""
 msgid "Send e-mail"
 msgstr ""
 
-#: books/templates/base.html:25
+#: books/templates/base.html:32
 msgid "Ketabkhone"
 msgstr ""
 
-#: books/templates/base.html:35
+#: books/templates/base.html:42
 msgid "Home"
 msgstr ""
 
-#: books/templates/base.html:39 books/templates/books/collection_detail.html:13
+#: books/templates/base.html:46 books/templates/books/collection_detail.html:13
 msgid "Books"
 msgstr ""
 
-#: books/templates/base.html:43
+#: books/templates/base.html:50
 msgid "Collections"
 msgstr ""
 
-#: books/templates/base.html:49 books/templates/books/book_detail.html:12
+#: books/templates/base.html:54
+msgid "Admin"
+msgstr ""
+
+#: books/templates/base.html:67
+msgid "Logout"
+msgstr ""
+
+#: books/templates/base.html:73 books/templates/books/book_detail.html:83
+msgid "Language"
+msgstr ""
+
+#: books/templates/base.html:103
+msgid "Admin Panel"
+msgstr ""
+
+#: books/templates/base.html:112 books/templates/books/book_detail.html:12
 msgid "ISBN"
 msgstr ""
 
-#: books/templates/base.html:51 books/templates/books/isbn_list.html:7
+#: books/templates/base.html:119 books/templates/books/isbn_list.html:7
 msgid "ISBN List"
 msgstr ""
 
-#: books/templates/base.html:52 books/templates/books/isbn_form.html:7
+#: books/templates/base.html:121 books/templates/books/isbn_form.html:7
 #: books/templates/books/isbn_form.html:20
 msgid "Add ISBN"
 msgstr ""
 
-#: books/templates/base.html:53 books/templates/books/isbn_update.html:18
+#: books/templates/base.html:123 books/templates/books/isbn_update.html:18
 msgid "Update ISBN"
 msgstr ""
 
-#: books/templates/base.html:54
+#: books/templates/base.html:124
 msgid "Delete ISBN"
 msgstr ""
 
-#: books/templates/base.html:58 books/templates/base.html:79
+#: books/templates/base.html:128 books/templates/base.html:156
 msgid "Add an Issue"
 msgstr ""
 
-#: books/templates/base.html:64
+#: books/templates/base.html:137
 msgid "Basic Data"
 msgstr ""
 
-#: books/templates/base.html:66 books/templates/books/author_list.html:8
+#: books/templates/base.html:144 books/templates/books/author_list.html:8
 msgid "Authors"
 msgstr ""
 
-#: books/templates/base.html:68 books/templates/books/translator_list.html:8
+#: books/templates/base.html:147 books/templates/books/translator_list.html:8
 msgid "Translators"
 msgstr ""
 
-#: books/templates/base.html:69
+#: books/templates/base.html:148
 msgid "Ilustrators"
 msgstr ""
 
-#: books/templates/base.html:70 books/templates/books/book_detail.html:24
+#: books/templates/base.html:149 books/templates/books/book_detail.html:24
 msgid "Publisher"
 msgstr ""
 
-#: books/templates/base.html:71
+#: books/templates/base.html:150
 msgid "Prizes"
 msgstr ""
 
-#: books/templates/base.html:72
+#: books/templates/base.html:151
 msgid "Market Info"
 msgstr ""
 
-#: books/templates/base.html:73
-msgid "Shoora Book Groups"
-msgstr ""
-
-#: books/templates/base.html:74
-msgid "Shoora Book Info"
-msgstr ""
-
-#: books/templates/base.html:75
+#: books/templates/base.html:152
 msgid "Content Info"
 msgstr ""
 
-#: books/templates/base.html:86
+#: books/templates/base.html:165
 msgid "Reports"
 msgstr ""
 
-#: books/templates/base.html:90
-msgid "Admin"
+#: books/templates/base.html:179
+msgid "Shoora Book Info"
 msgstr ""
 
-#: books/templates/base.html:102
-msgid "Logout"
+#: books/templates/base.html:186
+msgid "Shoora Book Groups"
 msgstr ""
 
-#: books/templates/base.html:110 books/templates/books/book_detail.html:83
-msgid "Language"
-msgstr ""
-
-#: books/templates/base.html:139
+#: books/templates/base.html:220
 msgid "2021 CBC & Ketabkhone"
 msgstr ""
 
-#: books/templates/base.html:141
+#: books/templates/base.html:222
 msgid "Privacy"
 msgstr ""
 
-#: books/templates/base.html:142
+#: books/templates/base.html:223
 msgid "Terms"
 msgstr ""
 
-#: books/templates/base.html:143
+#: books/templates/base.html:224
 msgid "Support"
 msgstr ""
 
@@ -389,22 +393,26 @@ msgstr ""
 #: books/templates/books/author_detail.html:10
 #: books/templates/books/book_detail.html:11
 #: books/templates/books/collection_detail.html:11
+#: books/templates/books/illustrator_detail.html:10
 #: books/templates/books/translator_detail.html:10
 msgid "Name"
 msgstr ""
 
 #: books/templates/books/author_detail.html:11
+#: books/templates/books/illustrator_detail.html:11
 #: books/templates/books/translator_detail.html:11
 msgid "Latin Name"
 msgstr ""
 
 #: books/templates/books/author_detail.html:12
 #: books/templates/books/book_detail.html:84
+#: books/templates/books/illustrator_detail.html:12
 #: books/templates/books/translator_detail.html:12
 msgid "Nationality"
 msgstr ""
 
 #: books/templates/books/author_detail.html:13
+#: books/templates/books/illustrator_detail.html:13
 #: books/templates/books/translator_detail.html:13
 msgid "Books of"
 msgstr ""
@@ -655,6 +663,36 @@ msgstr ""
 #: books/templates/books/home.html:11
 #, python-format
 msgid "Hello %(name)s!"
+msgstr ""
+
+#: books/templates/books/illustrator_detail.html:9
+msgid "Illustrator Details"
+msgstr ""
+
+#: books/templates/books/illustrator_detail.html:21
+msgid "There is not any book related to this illustrator"
+msgstr ""
+
+#: books/templates/books/illustrator_form.html:8
+msgid "Add illustrator"
+msgstr ""
+
+#: books/templates/books/illustrator_form.html:12
+msgid ""
+"You can add a illustrator and then you could use it in a book registering"
+msgstr ""
+
+#: books/templates/books/illustrator_form.html:18
+#: books/templates/books/illustrator_list.html:11
+msgid "Add Illustrator"
+msgstr ""
+
+#: books/templates/books/illustrator_list.html:8
+msgid "Illustrators"
+msgstr ""
+
+#: books/templates/books/illustrator_list.html:14
+msgid "List of illustrators"
 msgstr ""
 
 #: books/templates/books/isbn_confirm_delete.html:9

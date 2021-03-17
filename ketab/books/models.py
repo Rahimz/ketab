@@ -38,6 +38,10 @@ class Translator(models.Model):
 
 class Illustrator(models.Model):
     name = models.CharField(max_length=1500)
+    latin_name = models.CharField(max_length=1500,
+                                  blank=True, null=True)
+    nationality = models.CharField(max_length=1500,
+                                   blank=True, null=True)
 
     class Meta:
         ordering = ['name']

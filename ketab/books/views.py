@@ -3,7 +3,7 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic import ListView, DetailView
 from django.urls import reverse_lazy
 from django.http import HttpResponse
-from .models import Book, Author, Translator, Critique, Collection, ISBN, Market, Shoora
+from .models import Book, Author, Translator, Critique, Collection, ISBN, Market, Shoora, Illustrator
 from .forms import IsbnFormUpdate
 
 
@@ -170,4 +170,36 @@ def TranslatorDetail(request, pk):
     return render(request,
                   'books/translator_detail.html',
                   {'translator': translator,
+                   'books': books})
+
+
+# Illustrator Views
+class IllustratorList(ListView):
+    model = Illustrator
+
+
+class IllustratorCreate(CreateView):
+    model = Illustrator
+    fields = '__all__'
+    success_url = reverse_lazy('illustrator_list')
+
+
+def IllustratorDetail(request, pk):
+    illustrator = get_object_or_404(Illustrator, pk=pk)
+    books = None
+    '''
+    These two query sets check whether the illustrator is the first illustrator of a book
+    or is the second illustrator of a book
+    '''
+    book_id1 = Book.objects.filter(illustrator_1=illustrator).values_list('id', flat=True)
+    book_id2 = Book.objects.filter(illustrator_2=illustrator).values_list('id', flat=True)
+    book_ids = book_id1 | book_id2  # removes duplicated book names
+    try:
+        books = Book.objects.filter(id__in=book_ids)
+    except Book.DoesNotExist:
+        books = None
+
+    return render(request,
+                  'books/illustrator_detail.html',
+                  {'illustrator': illustrator,
                    'books': books})

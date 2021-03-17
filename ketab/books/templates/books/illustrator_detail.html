@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+
+{% block basic_active %}active{% endblock %}
+
+{% block body %}
+<div>
+    <h2>{% trans 'Illustrator Details' %}</h2>
+    <p>{% trans 'Name' %}: {{ illustrator.name }}</p>
+    <p>{% trans 'Latin Name' %}: {{ illustrator.latin_name }}</p>
+    <p>{% trans 'Nationality' %}: {{ illustrator.nationality }}</p>
+    <h3>{% trans 'Books of' %} {{ illustrator.name }}</h3>
+    {% if books %}
+        <ul>
+        {% for book in books %}
+            <li><a href="{{ book.get_absolute_url }}">{{ book }}</a></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>{% trans 'There is not any book related to this illustrator' %}.</p>
+    {% endif %}
+</div>
+{% endblock %}
