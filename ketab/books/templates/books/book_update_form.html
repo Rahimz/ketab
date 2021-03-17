@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+
+{% block basic_active %}active{% endblock %}
+
+{% block body %}
+<h2>{% trans 'Edit book' %}</h2>
+
+  <form action="" method="post">
+      <ul>
+          <li>{% trans 'You can Edit a book here' %}!</li>
+      </ul>
+    {% csrf_token %}
+    <table>
+    {{ form.as_table }}
+    </table>
+    <input class="m-2" type="submit" value="{% trans 'Edit Book' %}">
+  </form>
+{% endblock %}

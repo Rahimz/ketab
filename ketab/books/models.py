@@ -169,7 +169,7 @@ class Book(models.Model):
         return self.name
 
     def get_absolute_url(self):
-        return reverse('bookdetail', args=[self.isbn])
+        return reverse('book_detail', args=[self.isbn])
 
   
 class Critique(models.Model): 

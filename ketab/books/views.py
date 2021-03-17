@@ -4,7 +4,7 @@ from django.views.generic import ListView, DetailView
 from django.urls import reverse_lazy
 from django.http import HttpResponse
 from .models import Book, Author, Translator, Critique, Collection, ISBN, Market, Shoora, Illustrator
-from .forms import IsbnFormUpdate
+from .forms import IsbnFormUpdate, BookFormUpdate
 
 
 def home(request):
@@ -13,14 +13,14 @@ def home(request):
                   {})
 
 
-def booklist(request):
+def BookList(request):
     books = Book.objects.all()
     return render(request,
                   'books/books_list.html',
                   {'books': books})
 
 
-def bookdetail(request, isbn):
+def BookDetail(request, isbn):
     isbn = get_object_or_404(ISBN,
                              code=isbn)
     book = Book.objects.all().get(isbn=isbn)
@@ -43,6 +43,19 @@ def bookdetail(request, isbn):
                    'collection': collection,
                    'market': market,
                    'shoora': shoora})
+
+
+class BookCreate(CreateView):
+    model = Book
+    fields = '__all__'
+    success_url = reverse_lazy('book_list')
+
+
+class BookUpdate(UpdateView):
+    model = Book
+    form_class = BookFormUpdate
+    template_name = 'books/book_update_form.html'
+    success_url = reverse_lazy('book_list')
 
 
 def collectionlist(request):

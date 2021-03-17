@@ -9,3 +9,10 @@ class IsbnFormUpdate(ModelForm):
         fields = '__all__'
 
 
+class BookFormUpdate(ModelForm):
+
+    class Meta:
+        model = Book
+        fields = '__all__'
+
+

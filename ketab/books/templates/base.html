@@ -42,7 +42,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {% block book_active %}{% endblock %}"
-                           href="{% url 'booklist' %}">{% trans 'Books' %}</a>
+                           href="{% url 'book_list' %}">{% trans 'Books' %}</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {% block collection_active %}{% endblock %}"
@@ -95,7 +95,7 @@
             <!--        Acordion menu start -->
             <div class="accordion" style="width:250px;" id="accordionExample">
                 <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingThree">
+                    <h2 class="accordion-header" id="">
                         <button class="accordion-button " disabled type="" data-bs-toggle="" data-bs-target=""
                                 aria-expanded="true" aria-controls="">
                             {% trans 'Admin Panel' %}
@@ -139,8 +139,8 @@
                          data-bs-parent="#accordionExample">
                         <div class="accordion-body">
                             <ul class="" aria-labelledby="">
-                                <li><a class="dropdown-item" href="{% url 'author_list' %}">{% trans 'Authors' %}</a>
-                                </li>
+                                <li><a class="dropdown-item" href="{% url 'book_list' %}">{% trans 'Books' %}</a></li>
+                                <li><a class="dropdown-item" href="{% url 'author_list' %}">{% trans 'Authors' %}</a></li>
                                 <li><a class="dropdown-item" href="{% url 'translator_list' %}">{% trans 'Translators' %}</a></li>
                                 <li><a class="dropdown-item" href="{% url 'illustrator_list' %}">{% trans 'Ilustrators' %}</a></li>
                                 <li><a class="dropdown-item disabled" href="#">{% trans 'Publisher' %}</a></li>

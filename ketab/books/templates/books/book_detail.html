@@ -7,13 +7,17 @@
 {% block title %}{% trans 'Book details' %}{% endblock %}
 
 {% block body %}
-
+{% if request.user.is_staff %}
+<p>
+    <a href="{% url 'book_update' book.pk %}" class="btn btn-outline-secondary">{% trans 'Edit Book' %}</a>
+</p>
+{% endif %}
 <p>{% trans 'Name' %}: {{ book.name }}</p>
 <p>{% trans 'ISBN' %}: {{ book.isbn }}</p>
 <p>{% trans 'Author' %}: {% if book.author_1 %}<a href="{% url 'author_detail' book.author_1.pk %}">{{ book.author_1 }}</a>{% endif %}{% if book.author_2 %} - <a href="{% url 'author_detail' book.author_2.pk %}">{{ book.author_2 }}</a>{% endif %}</p>
 <p>{% trans 'Translator' %}: {% if book.translator_1 %}<a href="{% url 'translator_detail' book.translator_1.pk %}">{{ book.translator_1 }}</a> {% endif %}- {% if book.translator_2 %}<a href="{% url 'translator_detail' book.translator_2.pk %}">{{ book.translator_2 }}</a>{% endif %}</p>
 <p>{% trans 'Illustrated' %}: {{ book.illustrated }}</p>
-<p>{% trans 'Illustrator' %}: <a href="{% url 'illustrator_detail' book.illustrator_1.pk %}">{{ book.illustrator_1 }}</a> - {{ book.illustrator_2 }}</p>
+<p>{% trans 'Illustrator' %}: {% if book.illustrator_1 %}<a href="{% url 'illustrator_detail' book.illustrator_1.pk %}">{{ book.illustrator_1 }}</a>{% endif %} {% if book.illustrator_2 %} - <a href="{% url 'illustrator_detail' book.illustrator_2.pk %}">{{ book.illustrator_2 }}</a>{% endif %}</p>
 <p>{% trans 'Editor' %}: {{ book.editor }}</p>
 <p>{% trans 'Re-Write' %}: {{ book.re_write }}</p>
 <p>{% trans 'Collector' %}: {{ book.collector }}</p>

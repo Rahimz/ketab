@@ -5,8 +5,12 @@ from . import views
 
 urlpatterns = [
     path('', views.home, name='home'),
-    path('books/', views.booklist, name='booklist'),
-    path('books/<int:isbn>/', views.bookdetail, name='bookdetail'),
+
+    path('books/', views.BookList, name='book_list'),
+    path('books/<int:isbn>/', views.BookDetail, name='book_detail'),
+    path('books/create/', views.BookCreate.as_view(), name='book_create'),
+    path('books/<int:pk>/update/', views.BookUpdate.as_view(), name='book_update'),
+
     path('books/collections/', views.collectionlist, name='collectionlist'),
     path('books/collections/<int:pk>/', views.collectiondetail, name='collectiondetail'),
 
