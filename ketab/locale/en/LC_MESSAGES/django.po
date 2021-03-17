@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-17 09:09+0330\n"
+"POT-Creation-Date: 2021-03-17 13:14+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -277,7 +277,8 @@ msgstr ""
 msgid "Home"
 msgstr ""
 
-#: books/templates/base.html:46 books/templates/books/collection_detail.html:13
+#: books/templates/base.html:46 books/templates/base.html:143
+#: books/templates/books/collection_detail.html:13
 msgid "Books"
 msgstr ""
 
@@ -293,40 +294,40 @@ msgstr ""
 msgid "Logout"
 msgstr ""
 
-#: books/templates/base.html:73 books/templates/books/book_detail.html:83
+#: books/templates/base.html:73 books/templates/books/book_detail.html:87
 msgid "Language"
 msgstr ""
 
-#: books/templates/base.html:103
+#: books/templates/base.html:102
 msgid "Admin Panel"
 msgstr ""
 
-#: books/templates/base.html:112 books/templates/books/book_detail.html:12
+#: books/templates/base.html:111 books/templates/books/book_detail.html:16
 msgid "ISBN"
 msgstr ""
 
-#: books/templates/base.html:119 books/templates/books/isbn_list.html:7
+#: books/templates/base.html:118 books/templates/books/isbn_list.html:9
 msgid "ISBN List"
 msgstr ""
 
-#: books/templates/base.html:121 books/templates/books/isbn_form.html:7
-#: books/templates/books/isbn_form.html:20
+#: books/templates/base.html:120 books/templates/books/isbn_form.html:9
+#: books/templates/books/isbn_form.html:22
 msgid "Add ISBN"
 msgstr ""
 
-#: books/templates/base.html:123 books/templates/books/isbn_update.html:18
+#: books/templates/base.html:122 books/templates/books/isbn_update.html:20
 msgid "Update ISBN"
 msgstr ""
 
-#: books/templates/base.html:124
+#: books/templates/base.html:123
 msgid "Delete ISBN"
 msgstr ""
 
-#: books/templates/base.html:128 books/templates/base.html:156
+#: books/templates/base.html:127 books/templates/base.html:154
 msgid "Add an Issue"
 msgstr ""
 
-#: books/templates/base.html:137
+#: books/templates/base.html:136
 msgid "Basic Data"
 msgstr ""
 
@@ -334,55 +335,55 @@ msgstr ""
 msgid "Authors"
 msgstr ""
 
-#: books/templates/base.html:147 books/templates/books/translator_list.html:8
+#: books/templates/base.html:145 books/templates/books/translator_list.html:8
 msgid "Translators"
 msgstr ""
 
-#: books/templates/base.html:148
+#: books/templates/base.html:146
 msgid "Ilustrators"
 msgstr ""
 
-#: books/templates/base.html:149 books/templates/books/book_detail.html:24
+#: books/templates/base.html:147 books/templates/books/book_detail.html:28
 msgid "Publisher"
 msgstr ""
 
-#: books/templates/base.html:150
+#: books/templates/base.html:148
 msgid "Prizes"
 msgstr ""
 
-#: books/templates/base.html:151
+#: books/templates/base.html:149
 msgid "Market Info"
 msgstr ""
 
-#: books/templates/base.html:152
+#: books/templates/base.html:150
 msgid "Content Info"
 msgstr ""
 
-#: books/templates/base.html:165
+#: books/templates/base.html:163
 msgid "Reports"
 msgstr ""
 
-#: books/templates/base.html:179
+#: books/templates/base.html:177
 msgid "Shoora Book Info"
 msgstr ""
 
-#: books/templates/base.html:186
+#: books/templates/base.html:184
 msgid "Shoora Book Groups"
 msgstr ""
 
-#: books/templates/base.html:220
+#: books/templates/base.html:218
 msgid "2021 CBC & Ketabkhone"
 msgstr ""
 
-#: books/templates/base.html:222
+#: books/templates/base.html:220
 msgid "Privacy"
 msgstr ""
 
-#: books/templates/base.html:223
+#: books/templates/base.html:221
 msgid "Terms"
 msgstr ""
 
-#: books/templates/base.html:224
+#: books/templates/base.html:222
 msgid "Support"
 msgstr ""
 
@@ -391,7 +392,7 @@ msgid "Author Details"
 msgstr ""
 
 #: books/templates/books/author_detail.html:10
-#: books/templates/books/book_detail.html:11
+#: books/templates/books/book_detail.html:15
 #: books/templates/books/collection_detail.html:11
 #: books/templates/books/illustrator_detail.html:10
 #: books/templates/books/translator_detail.html:10
@@ -405,7 +406,7 @@ msgid "Latin Name"
 msgstr ""
 
 #: books/templates/books/author_detail.html:12
-#: books/templates/books/book_detail.html:84
+#: books/templates/books/book_detail.html:88
 #: books/templates/books/illustrator_detail.html:12
 #: books/templates/books/translator_detail.html:12
 msgid "Nationality"
@@ -442,209 +443,237 @@ msgstr ""
 msgid "Book details"
 msgstr ""
 
-#: books/templates/books/book_detail.html:13
-msgid "Author"
-msgstr ""
-
-#: books/templates/books/book_detail.html:14
-msgid "Translator"
-msgstr ""
-
-#: books/templates/books/book_detail.html:15
-msgid "Illustrated"
-msgstr ""
-
-#: books/templates/books/book_detail.html:16
-msgid "Illustrator"
+#: books/templates/books/book_detail.html:12
+#: books/templates/books/book_update_form.html:18
+msgid "Edit Book"
 msgstr ""
 
 #: books/templates/books/book_detail.html:17
-msgid "Editor"
+msgid "Author"
 msgstr ""
 
 #: books/templates/books/book_detail.html:18
-msgid "Re-Write"
+msgid "Translator"
 msgstr ""
 
 #: books/templates/books/book_detail.html:19
-msgid "Collector"
+msgid "Illustrated"
 msgstr ""
 
 #: books/templates/books/book_detail.html:20
-msgid "Is a Collection"
+msgid "Illustrator"
 msgstr ""
 
 #: books/templates/books/book_detail.html:21
+msgid "Editor"
+msgstr ""
+
+#: books/templates/books/book_detail.html:22
+msgid "Re-Write"
+msgstr ""
+
+#: books/templates/books/book_detail.html:23
+msgid "Collector"
+msgstr ""
+
+#: books/templates/books/book_detail.html:24
+msgid "Is a Collection"
+msgstr ""
+
+#: books/templates/books/book_detail.html:25
 #: books/templates/books/collection_detail.html:7
 msgid "Collection"
 msgstr ""
 
-#: books/templates/books/book_detail.html:22
+#: books/templates/books/book_detail.html:26
 msgid "Number in series"
 msgstr ""
 
-#: books/templates/books/book_detail.html:23
+#: books/templates/books/book_detail.html:27
 msgid "Publication place"
 msgstr ""
 
-#: books/templates/books/book_detail.html:25
+#: books/templates/books/book_detail.html:29
 msgid "Publisher sub-category"
 msgstr ""
 
-#: books/templates/books/book_detail.html:26
+#: books/templates/books/book_detail.html:30
 msgid "Publisher 2"
 msgstr ""
 
-#: books/templates/books/book_detail.html:27
+#: books/templates/books/book_detail.html:31
 msgid "Publishing Year"
 msgstr ""
 
-#: books/templates/books/book_detail.html:29
+#: books/templates/books/book_detail.html:33
 msgid "Pages"
 msgstr ""
 
-#: books/templates/books/book_detail.html:30
+#: books/templates/books/book_detail.html:34
 msgid "Circulation"
 msgstr ""
 
-#: books/templates/books/book_detail.html:31
+#: books/templates/books/book_detail.html:35
 msgid "Bibliography"
 msgstr ""
 
-#: books/templates/books/book_detail.html:32
+#: books/templates/books/book_detail.html:36
 msgid "Tags"
 msgstr ""
 
-#: books/templates/books/book_detail.html:33
-#: books/templates/books/book_detail.html:77
+#: books/templates/books/book_detail.html:37
+#: books/templates/books/book_detail.html:81
 msgid "Genre"
 msgstr ""
 
-#: books/templates/books/book_detail.html:39
+#: books/templates/books/book_detail.html:43
 msgid "Critiques"
 msgstr ""
 
-#: books/templates/books/book_detail.html:47
+#: books/templates/books/book_detail.html:51
 msgid "Market Info."
 msgstr ""
 
-#: books/templates/books/book_detail.html:48
+#: books/templates/books/book_detail.html:52
 msgid "Shoora Info."
 msgstr ""
 
-#: books/templates/books/book_detail.html:52
+#: books/templates/books/book_detail.html:56
 msgid "Market info"
 msgstr ""
 
-#: books/templates/books/book_detail.html:53
+#: books/templates/books/book_detail.html:57
 msgid "Available"
 msgstr ""
 
-#: books/templates/books/book_detail.html:53
+#: books/templates/books/book_detail.html:57
 msgid "Yes"
 msgstr ""
 
-#: books/templates/books/book_detail.html:53
+#: books/templates/books/book_detail.html:57
 msgid "No"
 msgstr ""
 
-#: books/templates/books/book_detail.html:54
+#: books/templates/books/book_detail.html:58
 msgid "Last Price"
 msgstr ""
 
-#: books/templates/books/book_detail.html:55
+#: books/templates/books/book_detail.html:59
 msgid "Last Published Year"
 msgstr ""
 
-#: books/templates/books/book_detail.html:56
+#: books/templates/books/book_detail.html:60
 msgid "Last Circulation"
 msgstr ""
 
-#: books/templates/books/book_detail.html:57
+#: books/templates/books/book_detail.html:61
 msgid "Updated"
 msgstr ""
 
-#: books/templates/books/book_detail.html:59
+#: books/templates/books/book_detail.html:63
 msgid "There is no market info"
 msgstr ""
 
-#: books/templates/books/book_detail.html:67
+#: books/templates/books/book_detail.html:71
 msgid "Shoora info"
 msgstr ""
 
-#: books/templates/books/book_detail.html:68
+#: books/templates/books/book_detail.html:72
 msgid "Book group"
 msgstr ""
 
-#: books/templates/books/book_detail.html:69
+#: books/templates/books/book_detail.html:73
 msgid "Subject"
 msgstr ""
 
-#: books/templates/books/book_detail.html:70
+#: books/templates/books/book_detail.html:74
 msgid "Category"
 msgstr ""
 
-#: books/templates/books/book_detail.html:71
+#: books/templates/books/book_detail.html:75
 msgid "Satiric"
 msgstr ""
 
-#: books/templates/books/book_detail.html:72
+#: books/templates/books/book_detail.html:76
 msgid "Main character"
 msgstr ""
 
-#: books/templates/books/book_detail.html:73
+#: books/templates/books/book_detail.html:77
 msgid "Main character description"
 msgstr ""
 
-#: books/templates/books/book_detail.html:74
+#: books/templates/books/book_detail.html:78
 msgid "Point of View"
 msgstr ""
 
-#: books/templates/books/book_detail.html:75
+#: books/templates/books/book_detail.html:79
 msgid "Events_place"
 msgstr ""
 
-#: books/templates/books/book_detail.html:76
+#: books/templates/books/book_detail.html:80
 msgid "Child special need"
 msgstr ""
 
-#: books/templates/books/book_detail.html:78
+#: books/templates/books/book_detail.html:82
 msgid "Genre Description"
 msgstr ""
 
-#: books/templates/books/book_detail.html:79
+#: books/templates/books/book_detail.html:83
 msgid "Age Range"
 msgstr ""
 
-#: books/templates/books/book_detail.html:80
+#: books/templates/books/book_detail.html:84
 msgid "Position"
 msgstr ""
 
-#: books/templates/books/book_detail.html:81
+#: books/templates/books/book_detail.html:85
 msgid "Book latin name"
 msgstr ""
 
-#: books/templates/books/book_detail.html:82
+#: books/templates/books/book_detail.html:86
 msgid "Author latin name"
 msgstr ""
 
-#: books/templates/books/book_detail.html:85
+#: books/templates/books/book_detail.html:89
 msgid "Score"
 msgstr ""
 
-#: books/templates/books/book_detail.html:86
+#: books/templates/books/book_detail.html:90
 msgid "Other translations"
 msgstr ""
 
-#: books/templates/books/book_detail.html:87
+#: books/templates/books/book_detail.html:91
 msgid "Cpoyright"
 msgstr ""
 
-#: books/templates/books/book_detail.html:91
+#: books/templates/books/book_detail.html:95
 msgid "There is no shoora info"
 msgstr ""
 
-#: books/templates/books/books_list.html:7
+#: books/templates/books/book_form.html:8
+msgid "Add book"
+msgstr ""
+
+#: books/templates/books/book_form.html:12
+msgid ""
+"You can add a book here! If you could not find an author, translator or etc. "
+"in the list you should add them first"
+msgstr ""
+
+#: books/templates/books/book_form.html:18
+#: books/templates/books/books_list.html:15
+msgid "Add Book"
+msgstr ""
+
+#: books/templates/books/book_update_form.html:8
+msgid "Edit book"
+msgstr ""
+
+#: books/templates/books/book_update_form.html:12
+msgid "You can Edit a book here"
+msgstr ""
+
+#: books/templates/books/books_list.html:11
 msgid "Books List"
 msgstr ""
 
@@ -695,55 +724,55 @@ msgstr ""
 msgid "List of illustrators"
 msgstr ""
 
-#: books/templates/books/isbn_confirm_delete.html:9
+#: books/templates/books/isbn_confirm_delete.html:11
 msgid "Delete Author"
 msgstr ""
 
-#: books/templates/books/isbn_confirm_delete.html:11
+#: books/templates/books/isbn_confirm_delete.html:13
 msgid "Are you sure you want to delete the ISBN"
 msgstr ""
 
-#: books/templates/books/isbn_confirm_delete.html:12
+#: books/templates/books/isbn_confirm_delete.html:14
 msgid "NOTE"
 msgstr ""
 
-#: books/templates/books/isbn_confirm_delete.html:12
+#: books/templates/books/isbn_confirm_delete.html:14
 msgid ""
 "All of the book details which is related to this ISBN will be removed "
 "permanently"
 msgstr ""
 
-#: books/templates/books/isbn_confirm_delete.html:16
+#: books/templates/books/isbn_confirm_delete.html:18
 msgid "Yes, delete."
 msgstr ""
 
-#: books/templates/books/isbn_detail.html:9
+#: books/templates/books/isbn_detail.html:11
 msgid "ISBN Details"
 msgstr ""
 
-#: books/templates/books/isbn_detail.html:20
+#: books/templates/books/isbn_detail.html:22
 msgid "There is no book related to this ISBN"
 msgstr ""
 
-#: books/templates/books/isbn_form.html:12
-#: books/templates/books/isbn_update.html:10
+#: books/templates/books/isbn_form.html:14
+#: books/templates/books/isbn_update.html:12
 msgid "The ISBN is the most important identification for a book"
 msgstr ""
 
-#: books/templates/books/isbn_form.html:13
+#: books/templates/books/isbn_form.html:15
 msgid ""
 "The structure of its 13-digits character xxx-xx-xxxx-xxx-x or the older 10-"
 "digits is xx-xxxx-xxx-x "
 msgstr ""
 
-#: books/templates/books/isbn_form.html:14
-#: books/templates/books/isbn_update.html:12
+#: books/templates/books/isbn_form.html:16
+#: books/templates/books/isbn_update.html:14
 msgid ""
 "If you do not know hoe to define an ISBN you should contanct the "
 "administration of Website"
 msgstr ""
 
-#: books/templates/books/isbn_update.html:11
+#: books/templates/books/isbn_update.html:13
 msgid ""
 "The structure of its 13-digits character xxx-xx-xxxx-xxx-x or the older 10-"
 "digits is xx-xxxx-xxx-x"
