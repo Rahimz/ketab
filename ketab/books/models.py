@@ -267,6 +267,9 @@ class Shoora(models.Model):
     def __str__(self):
         return str(self.isbn)
 
+    def get_absolute_url(self):
+        return reverse('shoora_detail', args=[self.pk])
+
 
 class Content(models.Model):
     author = models.CharField(max_length=500,)

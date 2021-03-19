@@ -31,4 +31,9 @@ urlpatterns = [
     path('illustrator/', views.IllustratorList.as_view(), name='illustrator_list'),
     path('illustrator/create/', views.IllustratorCreate.as_view(), name='illustrator_create'),
     path('illustrator/<int:pk>', views.IllustratorDetail, name='illustrator_detail'),
+
+    path('shoora/', views.ShooraList.as_view(), name='shoora_list'),
+    path('shoora/<int:pk>/', views.ShooraDetail, name='shoora_detail'),
+    path('shoora/create/', views.ShooraCreate.as_view(), name='shoora_create'),
+
     ]

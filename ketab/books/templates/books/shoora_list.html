@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+
+{% block basic_active %}active{% endblock %}
+
+{% block body %}
+<h2>{% trans 'Shoora' %}</h2>
+<div class="row">
+    <p>{% trans 'Every year CBC reviewed published books for children and teenagers and these reviews publish for parents to help them for select the approriate books' %}.</p>
+    <p>
+    <a href="{% url 'shoora_create' %}" class="btn btn-outline-secondary">{% trans 'Add review' %}</a>
+    </p>
+</div>
+<h3>{% trans 'List of Shoora reviewed books' %}</h3>
+<ul>
+    {% for shoora in object_list %}
+    <li><a href="{% url 'shoora_detail' shoora.pk %}">{{ shoora.isbn }}</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}

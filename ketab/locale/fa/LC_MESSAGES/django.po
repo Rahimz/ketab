@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-17 13:14+0330\n"
-"PO-Revision-Date: 2021-03-17 09:47+0000\n"
+"POT-Creation-Date: 2021-03-19 09:51+0330\n"
+"PO-Revision-Date: 2021-03-19 06:25+0000\n"
 "Last-Translator: b'Rahim Aghreb <rahim.aghareb@gmail.com>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -311,6 +311,7 @@ msgid "Admin Panel"
 msgstr "پنل مدیریت"
 
 #: books/templates/base.html:111 books/templates/books/book_detail.html:16
+#: books/templates/books/shoora_detail.html:11
 msgid "ISBN"
 msgstr "ISBN"
 
@@ -376,22 +377,27 @@ msgid "Shoora Book Info"
 msgstr "اطلاعات کتاب شورا"
 
 #: books/templates/base.html:184
+#| msgid "Shoora Book Groups"
+msgid "Shoora Book List"
+msgstr "لیست کتاب‌های شورا"
+
+#: books/templates/base.html:185
 msgid "Shoora Book Groups"
 msgstr "گروه‌های کتاب شورا"
 
-#: books/templates/base.html:218
+#: books/templates/base.html:219
 msgid "2021 CBC & Ketabkhone"
 msgstr "کتابخونه و شورای کتاب کودک"
 
-#: books/templates/base.html:220
+#: books/templates/base.html:221
 msgid "Privacy"
 msgstr "حریم خصوصی"
 
-#: books/templates/base.html:221
+#: books/templates/base.html:222
 msgid "Terms"
 msgstr "قوانین"
 
-#: books/templates/base.html:222
+#: books/templates/base.html:223
 msgid "Support"
 msgstr "پشتیبانی"
 
@@ -454,7 +460,6 @@ msgstr "مشخصات کتاب"
 
 #: books/templates/books/book_detail.html:12
 #: books/templates/books/book_update_form.html:18
-#| msgid "Editor"
 msgid "Edit Book"
 msgstr "اصلاح کتاب"
 
@@ -593,10 +598,12 @@ msgid "Book group"
 msgstr "گروه‌های کتاب"
 
 #: books/templates/books/book_detail.html:73
+#: books/templates/books/shoora_detail.html:12
 msgid "Subject"
 msgstr "موضوع"
 
 #: books/templates/books/book_detail.html:74
+#: books/templates/books/shoora_detail.html:13
 msgid "Category"
 msgstr "دسته‌بندی"
 
@@ -605,6 +612,7 @@ msgid "Satiric"
 msgstr "طنز"
 
 #: books/templates/books/book_detail.html:76
+#: books/templates/books/shoora_detail.html:14
 msgid "Main character"
 msgstr "شخصیت اصلی"
 
@@ -674,12 +682,10 @@ msgstr ""
 
 #: books/templates/books/book_form.html:18
 #: books/templates/books/books_list.html:15
-#| msgid "Add ISBN"
 msgid "Add Book"
 msgstr "اضافه کردن کتاب"
 
 #: books/templates/books/book_update_form.html:8
-#| msgid "Editor"
 msgid "Edit book"
 msgstr "اصلاح کتاب"
 
@@ -800,6 +806,41 @@ msgid ""
 msgstr ""
 "ساختار این کد یک عدد ۱۳ رقمی به شکل xxx-xx-xxxx-xxx-x است مدل‌های قدیمی‌تر "
 "آن ترکیبی ۱۰ رقمی به این شکل xx-xxxx-xxx-x  دارند"
+
+#: books/templates/books/shoora_detail.html:9
+#| msgid "Book details"
+msgid "Shoora Book Details"
+msgstr "مشخصات بازنگری کتاب شورا"
+
+#: books/templates/books/shoora_form.html:8
+#: books/templates/books/shoora_form.html:18
+#: books/templates/books/shoora_list.html:12
+#| msgid "Add profile"
+msgid "Add review"
+msgstr "اضافه کردن بازنگری"
+
+#: books/templates/books/shoora_form.html:12
+msgid "You can add a review for a book by selecting its ISBN"
+msgstr ""
+"شما می‌‌توانید با انتخاب یک ISBN یک بازنگری برای کتاب مرتبط با آن بسازید"
+
+#: books/templates/books/shoora_list.html:8
+#| msgid "Shoora info"
+msgid "Shoora"
+msgstr "شورا"
+
+#: books/templates/books/shoora_list.html:10
+msgid ""
+"Every year CBC reviewed published books for children and teenagers and these"
+" reviews publish for parents to help them for select the approriate books"
+msgstr ""
+"هر سال شورای کتاب کودک، کتاب‌های منتشر شده برای کودکان و نوجوانان را بررسی "
+"کرده و این بازنگری‌ها را منتشر می‌کند تا به والدین برای انتخاب کتاب، کمک "
+"کند."
+
+#: books/templates/books/shoora_list.html:15
+msgid "List of Shoora reviewed books"
+msgstr "لیست کتاب‌های بازنگری شده توسط شورا"
 
 #: books/templates/books/translator_detail.html:9
 msgid "Translator Details"

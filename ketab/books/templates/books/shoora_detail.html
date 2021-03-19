@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+
+{% block basic_active %}active{% endblock %}
+
+{% block body %}
+<div>
+    <h2>{% trans 'Shoora Book Details' %}</h2>
+    <h3>{{ book.name }}</h3>
+    <p>{% trans 'ISBN' %}: {{ shoora.isbn }}</p>
+    <p>{% trans 'Subject' %}: {{ shoora.subject }}</p>
+    <p>{% trans 'Category' %}: {{ shoora.category }}</p>
+    <h3>{% trans 'Main character' %} {{ shoora.main_character }}</h3>
+
+</div>
+{% endblock %}

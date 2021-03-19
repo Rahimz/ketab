@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-17 13:14+0330\n"
+"POT-Creation-Date: 2021-03-19 09:51+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -303,6 +303,7 @@ msgid "Admin Panel"
 msgstr ""
 
 #: books/templates/base.html:111 books/templates/books/book_detail.html:16
+#: books/templates/books/shoora_detail.html:11
 msgid "ISBN"
 msgstr ""
 
@@ -368,22 +369,26 @@ msgid "Shoora Book Info"
 msgstr ""
 
 #: books/templates/base.html:184
+msgid "Shoora Book List"
+msgstr ""
+
+#: books/templates/base.html:185
 msgid "Shoora Book Groups"
 msgstr ""
 
-#: books/templates/base.html:218
+#: books/templates/base.html:219
 msgid "2021 CBC & Ketabkhone"
 msgstr ""
 
-#: books/templates/base.html:220
+#: books/templates/base.html:221
 msgid "Privacy"
 msgstr ""
 
-#: books/templates/base.html:221
+#: books/templates/base.html:222
 msgid "Terms"
 msgstr ""
 
-#: books/templates/base.html:222
+#: books/templates/base.html:223
 msgid "Support"
 msgstr ""
 
@@ -583,10 +588,12 @@ msgid "Book group"
 msgstr ""
 
 #: books/templates/books/book_detail.html:73
+#: books/templates/books/shoora_detail.html:12
 msgid "Subject"
 msgstr ""
 
 #: books/templates/books/book_detail.html:74
+#: books/templates/books/shoora_detail.html:13
 msgid "Category"
 msgstr ""
 
@@ -595,6 +602,7 @@ msgid "Satiric"
 msgstr ""
 
 #: books/templates/books/book_detail.html:76
+#: books/templates/books/shoora_detail.html:14
 msgid "Main character"
 msgstr ""
 
@@ -776,6 +784,34 @@ msgstr ""
 msgid ""
 "The structure of its 13-digits character xxx-xx-xxxx-xxx-x or the older 10-"
 "digits is xx-xxxx-xxx-x"
+msgstr ""
+
+#: books/templates/books/shoora_detail.html:9
+msgid "Shoora Book Details"
+msgstr ""
+
+#: books/templates/books/shoora_form.html:8
+#: books/templates/books/shoora_form.html:18
+#: books/templates/books/shoora_list.html:12
+msgid "Add review"
+msgstr ""
+
+#: books/templates/books/shoora_form.html:12
+msgid "You can add a review for a book by selecting its ISBN"
+msgstr ""
+
+#: books/templates/books/shoora_list.html:8
+msgid "Shoora"
+msgstr ""
+
+#: books/templates/books/shoora_list.html:10
+msgid ""
+"Every year CBC reviewed published books for children and teenagers and these "
+"reviews publish for parents to help them for select the approriate books"
+msgstr ""
+
+#: books/templates/books/shoora_list.html:15
+msgid "List of Shoora reviewed books"
 msgstr ""
 
 #: books/templates/books/translator_detail.html:9

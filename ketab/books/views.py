@@ -216,3 +216,35 @@ def IllustratorDetail(request, pk):
                   'books/illustrator_detail.html',
                   {'illustrator': illustrator,
                    'books': books})
+
+
+# Shoora Views
+class ShooraList(ListView):
+    model = Shoora
+
+
+def ShooraDetail(request, pk):
+    shoora = get_object_or_404(Shoora, pk=pk)
+    book = Book.objects.get(isbn=shoora.isbn)
+    # '''
+    # These two query sets check whether the illustrator is the first illustrator of a book
+    # or is the second illustrator of a book
+    # '''
+    # book_id1 = Book.objects.filter(illustrator_1=illustrator).values_list('id', flat=True)
+    # book_id2 = Book.objects.filter(illustrator_2=illustrator).values_list('id', flat=True)
+    # book_ids = book_id1 | book_id2  # removes duplicated book names
+    # try:
+    #     books = Book.objects.filter(id__in=book_ids)
+    # except Book.DoesNotExist:
+    #     books = None
+
+    return render(request,
+                  'books/shoora_detail.html',
+                  {'shoora': shoora,
+                   'book': book})
+
+
+class ShooraCreate(CreateView):
+    model = Shoora
+    fields = '__all__'
+    success_url = reverse_lazy('shoora_list')
