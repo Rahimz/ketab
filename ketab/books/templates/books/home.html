@@ -10,4 +10,46 @@
 
 <p>{% blocktrans with name=request.user %}Hello {{ name }}!{% endblocktrans %}</p>
 
+{%if public_news %}
+<div class="row">
+    <h2 class="bg-info rounded-top">{% trans 'Public news' %}</h2>
+</div>
+{% for new in public_news %}
+<div class="row">
+    <p class="h3 text-primary">{{ new.title }}</p>
+    <p class="bg-light">{{ new.description | safe }}</p>
+
+</div>
+{% endfor %}
+
+{% endif %}
+
+{% if request.user.is_staff %}
+{%if staff_news %}
+<div class="row">
+    <h2 class="bg-success rounded-top">{% trans 'Staff news' %}</h2>
+</div>
+{% for new in staff_news %}
+<div class="row">
+    <p class="h3 text-primary">{{ new.title }}</p>
+    <p class="bg-light">{{ new.description | safe }}</p>
+</div>
+{% endfor %}
+{% endif %}
+{% endif %}
+
+{% if request.user.is_superuser %}
+{% if admin_news %}
+<div class="row">
+    <h2 class="bg-warning rounded-top">{% trans 'Admin news' %}</h2>
+</div>
+{% for new in admin_news %}
+<div class="row">
+    <p class="h3 text-primary">{{ new.title }}</p>
+    <p class="bg-light">{{ new.description | safe }}</p>
+</div>
+{% endfor %}
+{% endif %}
+{% endif %}
+
 {% endblock %}

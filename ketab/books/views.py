@@ -4,13 +4,19 @@ from django.views.generic import ListView, DetailView
 from django.urls import reverse_lazy
 from django.http import HttpResponse
 from .models import Book, Author, Translator, Critique, Collection, ISBN, Market, Shoora, Illustrator
+from news.models import News
 from .forms import IsbnFormUpdate, BookFormUpdate
 
 
 def home(request):
+    public_news = News.objects.filter(category='public')
+    staff_news = News.objects.filter(category='staff')
+    admin_news = News.objects.filter(category='admin')
     return render(request,
                   'books/home.html',
-                  {})
+                  {'public_news': public_news,
+                   'staff_news': staff_news,
+                   'admin_news': admin_news, })
 
 
 def BookList(request):
