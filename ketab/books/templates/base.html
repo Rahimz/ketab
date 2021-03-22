@@ -118,12 +118,10 @@
                                 </li>
                                 <li><a class="dropdown-item" href="{% url 'isbn-create' %}">{% trans 'Add ISBN' %}</a>
                                 </li>
+                                {% comment %}
                                 <li><a class="dropdown-item disabled" href="#">{% trans 'Update ISBN' %}</a></li>
                                 <li><a class="dropdown-item disabled" href="#">{% trans 'Delete ISBN' %}</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item disabled" href="#">{% trans 'Add an Issue' %}</a></li>
+                                {% endcomment %}
                             </ul>
                         </div>
                     </div>
@@ -147,10 +145,11 @@
                                 <li><a class="dropdown-item disabled" href="#">{% trans 'Prizes' %}</a></li>
                                 <li><a class="dropdown-item disabled" href="#">{% trans 'Market Info' %}</a></li>
                                 <li><a class="dropdown-item disabled" href="#">{% trans 'Content Info' %}</a></li>
-                                <li>
+                                {% comment %}
+
                                     <hr class="dropdown-divider">
-                                </li>
                                 <li><a class="dropdown-item disabled" href="#">{% trans 'Add an Issue' %}</a></li>
+                                {% endcomment %}
                             </ul>
                         </div>
                     </div>
