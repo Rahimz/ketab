@@ -36,7 +36,7 @@
             </a>
             <p class="card-text">{% if book.author_1 %}{{ book.author_1 }}{% else %} . . .{% endif %}</p>
             <p class="card-text">{% if book.publisher %}{{ book.publisher }}{% else %} . . .{% endif %}</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            <p class="card-text"><small class="text-muted">{{ book.created_date}}</small></p>
         </div>
     </div>
     </div>
