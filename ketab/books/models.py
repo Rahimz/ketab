@@ -158,6 +158,8 @@ class Book(models.Model):
                             blank=True, null=True,)
     genre = models.CharField(max_length=1500,
                              blank=True, null=True,)
+    image = models.ImageField(upload_to='books/',
+                              blank=True, null=True,)
 
     created_date = models.DateTimeField(auto_now_add=True,
                                         blank=True, null=True,)
