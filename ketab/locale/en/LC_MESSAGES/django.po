@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-22 14:57+0430\n"
+"POT-Creation-Date: 2021-03-23 14:20+0430\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -32,7 +32,7 @@ msgstr ""
 
 #: account/templates/account/create_profile.html:13
 #: account/templates/account/dashboard.html:14
-#: account/templates/account/edit.html:5 books/templates/base.html:60
+#: account/templates/account/edit.html:5 books/templates/base.html:64
 msgid "Dashboard"
 msgstr ""
 
@@ -153,7 +153,7 @@ msgid "log-in again"
 msgstr ""
 
 #: account/templates/registration/login.html:14
-#: account/templates/registration/login.html:34 books/templates/base.html:68
+#: account/templates/registration/login.html:34 books/templates/base.html:72
 msgid "Log-in"
 msgstr ""
 
@@ -262,7 +262,7 @@ msgstr ""
 msgid "Home"
 msgstr ""
 
-#: books/templates/base.html:46 books/templates/base.html:142
+#: books/templates/base.html:46 books/templates/base.html:146
 #: books/templates/books/collection_detail.html:13
 msgid "Books"
 msgstr ""
@@ -271,97 +271,102 @@ msgstr ""
 msgid "Collections"
 msgstr ""
 
-#: books/templates/base.html:54
+#: books/templates/base.html:54 news/templates/news/news_detail.html:15
+#: news/templates/news/news_list.html:8
+msgid "News"
+msgstr ""
+
+#: books/templates/base.html:58
 msgid "Admin"
 msgstr ""
 
-#: books/templates/base.html:67
+#: books/templates/base.html:71
 msgid "Logout"
 msgstr ""
 
-#: books/templates/base.html:73 books/templates/books/book_detail.html:87
+#: books/templates/base.html:77 books/templates/books/book_detail.html:87
 msgid "Language"
 msgstr ""
 
-#: books/templates/base.html:102
+#: books/templates/base.html:106
 msgid "Admin Panel"
 msgstr ""
 
-#: books/templates/base.html:111 books/templates/books/book_detail.html:16
+#: books/templates/base.html:115 books/templates/books/book_detail.html:16
 #: books/templates/books/shoora_detail.html:11
 msgid "ISBN"
 msgstr ""
 
-#: books/templates/base.html:118 books/templates/books/isbn_list.html:9
+#: books/templates/base.html:122 books/templates/books/isbn_list.html:9
 msgid "ISBN List"
 msgstr ""
 
-#: books/templates/base.html:120 books/templates/books/isbn_form.html:9
+#: books/templates/base.html:124 books/templates/books/isbn_form.html:9
 #: books/templates/books/isbn_form.html:22
 msgid "Add ISBN"
 msgstr ""
 
-#: books/templates/base.html:135
+#: books/templates/base.html:139
 msgid "Basic Data"
 msgstr ""
 
-#: books/templates/base.html:143 books/templates/books/author_list.html:8
+#: books/templates/base.html:147 books/templates/books/author_list.html:8
 msgid "Authors"
 msgstr ""
 
-#: books/templates/base.html:144 books/templates/books/translator_list.html:8
+#: books/templates/base.html:148 books/templates/books/translator_list.html:8
 msgid "Translators"
 msgstr ""
 
-#: books/templates/base.html:145
+#: books/templates/base.html:149
 msgid "Ilustrators"
 msgstr ""
 
-#: books/templates/base.html:146 books/templates/books/book_detail.html:28
+#: books/templates/base.html:150 books/templates/books/book_detail.html:28
 msgid "Publisher"
 msgstr ""
 
-#: books/templates/base.html:147
+#: books/templates/base.html:151
 msgid "Prizes"
 msgstr ""
 
-#: books/templates/base.html:148
+#: books/templates/base.html:152
 msgid "Market Info"
 msgstr ""
 
-#: books/templates/base.html:149
+#: books/templates/base.html:153
 msgid "Content Info"
 msgstr ""
 
-#: books/templates/base.html:164
+#: books/templates/base.html:168
 msgid "Reports"
 msgstr ""
 
-#: books/templates/base.html:178
+#: books/templates/base.html:182
 msgid "Shoora Book Info"
 msgstr ""
 
-#: books/templates/base.html:185
+#: books/templates/base.html:189
 msgid "Shoora Book List"
 msgstr ""
 
-#: books/templates/base.html:186
+#: books/templates/base.html:190
 msgid "Shoora Book Groups"
 msgstr ""
 
-#: books/templates/base.html:220
+#: books/templates/base.html:224
 msgid "2021 CBC & Ketabkhone"
 msgstr ""
 
-#: books/templates/base.html:222
+#: books/templates/base.html:226
 msgid "Privacy"
 msgstr ""
 
-#: books/templates/base.html:223
+#: books/templates/base.html:227
 msgid "Terms"
 msgstr ""
 
-#: books/templates/base.html:224
+#: books/templates/base.html:228
 msgid "Support"
 msgstr ""
 
@@ -675,6 +680,18 @@ msgstr ""
 msgid "Hello %(name)s!"
 msgstr ""
 
+#: books/templates/books/home.html:15 news/templates/news/news_list.html:12
+msgid "Public news"
+msgstr ""
+
+#: books/templates/books/home.html:30 news/templates/news/news_list.html:27
+msgid "Staff news"
+msgstr ""
+
+#: books/templates/books/home.html:44 news/templates/news/news_list.html:41
+msgid "Admin news"
+msgstr ""
+
 #: books/templates/books/illustrator_detail.html:9
 msgid "Illustrator Details"
 msgstr ""
@@ -817,10 +834,14 @@ msgstr ""
 msgid "List of translators"
 msgstr ""
 
-#: ketab/settings.py:115
+#: ketab/settings.py:116
 msgid "English"
 msgstr ""
 
-#: ketab/settings.py:116
+#: ketab/settings.py:117
 msgid "Farsi"
+msgstr ""
+
+#: news/templates/news/news_detail.html:15
+msgid "Oops! There is nothing here for you, please check the "
 msgstr ""

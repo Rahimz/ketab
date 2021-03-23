@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-22 14:57+0430\n"
-"PO-Revision-Date: 2021-03-22 10:18+0000\n"
+"POT-Creation-Date: 2021-03-23 14:20+0430\n"
+"PO-Revision-Date: 2021-03-23 09:52+0000\n"
 "Last-Translator: b'Rahim Aghreb <rahim.aghareb@gmail.com>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -33,7 +33,7 @@ msgstr "گذر‌واژه‌ها یکسان نیستند."
 
 #: account/templates/account/create_profile.html:13
 #: account/templates/account/dashboard.html:14
-#: account/templates/account/edit.html:5 books/templates/base.html:60
+#: account/templates/account/edit.html:5 books/templates/base.html:64
 msgid "Dashboard"
 msgstr "داشبورد"
 
@@ -93,8 +93,8 @@ msgstr "اخطار"
 
 #: account/templates/account/dashboard.html:59
 msgid ""
-"If you remove your profile user, every action and data you have entered will "
-"be deleted permanently."
+"If you remove your profile user, every action and data you have entered will"
+" be deleted permanently."
 msgstr ""
 "اگر شما پروفایل کاربری خود را حذف کنید، هر فعالیتی که داشته اید حذف شده و "
 "قابل بازگشت نیست."
@@ -111,7 +111,8 @@ msgstr "پاک کردن دائمی حساب کاربری!"
 msgid "You have to complete your profile first:"
 msgstr "شما باید ابتدا حساب کاربری خود را کامل کنید:"
 
-#: account/templates/account/edit.html:5 account/templates/account/edit.html:13
+#: account/templates/account/edit.html:5
+#: account/templates/account/edit.html:13
 msgid "Edit your account"
 msgstr "حساب کاربری خود را اصلاح کنید"
 
@@ -156,7 +157,7 @@ msgid "log-in again"
 msgstr "دوباره وارد شوید"
 
 #: account/templates/registration/login.html:14
-#: account/templates/registration/login.html:34 books/templates/base.html:68
+#: account/templates/registration/login.html:34 books/templates/base.html:72
 msgid "Log-in"
 msgstr "وارد شوید"
 
@@ -269,7 +270,7 @@ msgstr "کتابخونه"
 msgid "Home"
 msgstr "خانه"
 
-#: books/templates/base.html:46 books/templates/base.html:142
+#: books/templates/base.html:46 books/templates/base.html:146
 #: books/templates/books/collection_detail.html:13
 msgid "Books"
 msgstr "کتاب‌ها"
@@ -278,97 +279,102 @@ msgstr "کتاب‌ها"
 msgid "Collections"
 msgstr "مجموعه‌ها"
 
-#: books/templates/base.html:54
+#: books/templates/base.html:54 news/templates/news/news_detail.html:15
+#: news/templates/news/news_list.html:8
+msgid "News"
+msgstr "اخبار"
+
+#: books/templates/base.html:58
 msgid "Admin"
 msgstr "مدیر"
 
-#: books/templates/base.html:67
+#: books/templates/base.html:71
 msgid "Logout"
 msgstr "خروج"
 
-#: books/templates/base.html:73 books/templates/books/book_detail.html:87
+#: books/templates/base.html:77 books/templates/books/book_detail.html:87
 msgid "Language"
 msgstr "زبان"
 
-#: books/templates/base.html:102
+#: books/templates/base.html:106
 msgid "Admin Panel"
 msgstr "پنل مدیریت"
 
-#: books/templates/base.html:111 books/templates/books/book_detail.html:16
+#: books/templates/base.html:115 books/templates/books/book_detail.html:16
 #: books/templates/books/shoora_detail.html:11
 msgid "ISBN"
 msgstr "ISBN"
 
-#: books/templates/base.html:118 books/templates/books/isbn_list.html:9
+#: books/templates/base.html:122 books/templates/books/isbn_list.html:9
 msgid "ISBN List"
 msgstr "لیست ISBN"
 
-#: books/templates/base.html:120 books/templates/books/isbn_form.html:9
+#: books/templates/base.html:124 books/templates/books/isbn_form.html:9
 #: books/templates/books/isbn_form.html:22
 msgid "Add ISBN"
 msgstr "اضافه کردن ISBN"
 
-#: books/templates/base.html:135
+#: books/templates/base.html:139
 msgid "Basic Data"
 msgstr "اطلاعات پایه"
 
-#: books/templates/base.html:143 books/templates/books/author_list.html:8
+#: books/templates/base.html:147 books/templates/books/author_list.html:8
 msgid "Authors"
 msgstr "نویسندگان"
 
-#: books/templates/base.html:144 books/templates/books/translator_list.html:8
+#: books/templates/base.html:148 books/templates/books/translator_list.html:8
 msgid "Translators"
 msgstr "مترجمان"
 
-#: books/templates/base.html:145
+#: books/templates/base.html:149
 msgid "Ilustrators"
 msgstr "تصویرگران"
 
-#: books/templates/base.html:146 books/templates/books/book_detail.html:28
+#: books/templates/base.html:150 books/templates/books/book_detail.html:28
 msgid "Publisher"
 msgstr "ناشران"
 
-#: books/templates/base.html:147
+#: books/templates/base.html:151
 msgid "Prizes"
 msgstr "جوایز"
 
-#: books/templates/base.html:148
+#: books/templates/base.html:152
 msgid "Market Info"
 msgstr "اطلاعات بازار"
 
-#: books/templates/base.html:149
+#: books/templates/base.html:153
 msgid "Content Info"
 msgstr "اطلاعات تماس"
 
-#: books/templates/base.html:164
+#: books/templates/base.html:168
 msgid "Reports"
 msgstr "گزارش‌ها"
 
-#: books/templates/base.html:178
+#: books/templates/base.html:182
 msgid "Shoora Book Info"
 msgstr "اطلاعات کتاب شورا"
 
-#: books/templates/base.html:185
+#: books/templates/base.html:189
 msgid "Shoora Book List"
 msgstr "لیست کتاب‌های شورا"
 
-#: books/templates/base.html:186
+#: books/templates/base.html:190
 msgid "Shoora Book Groups"
 msgstr "گروه‌های کتاب شورا"
 
-#: books/templates/base.html:220
+#: books/templates/base.html:224
 msgid "2021 CBC & Ketabkhone"
 msgstr "کتابخونه و شورای کتاب کودک"
 
-#: books/templates/base.html:222
+#: books/templates/base.html:226
 msgid "Privacy"
 msgstr "حریم خصوصی"
 
-#: books/templates/base.html:223
+#: books/templates/base.html:227
 msgid "Terms"
 msgstr "قوانین"
 
-#: books/templates/base.html:224
+#: books/templates/base.html:228
 msgid "Support"
 msgstr "پشتیبانی"
 
@@ -645,11 +651,11 @@ msgstr "اضافه کردن کتاب"
 
 #: books/templates/books/book_form.html:12
 msgid ""
-"You can add a book here! If you could not find an author, translator or etc. "
-"in the list you should add them first"
+"You can add a book here! If you could not find an author, translator or etc."
+" in the list you should add them first"
 msgstr ""
-"اینجا می‌توانید یک کتاب اضافه کنید! اگر نویسنده، مترجم و ... را در لیست پیدا "
-"نمی‌کنید باید اول آنها را اضافه کنید"
+"اینجا می‌توانید یک کتاب اضافه کنید! اگر نویسنده، مترجم و ... را در لیست پیدا"
+" نمی‌کنید باید اول آنها را اضافه کنید"
 
 #: books/templates/books/book_form.html:18
 #: books/templates/books/books_list.html:18
@@ -684,6 +690,20 @@ msgstr "خانه"
 #, python-format
 msgid "Hello %(name)s!"
 msgstr " %(name)s سلام!"
+
+#: books/templates/books/home.html:15 news/templates/news/news_list.html:12
+#| msgid "Publisher"
+msgid "Public news"
+msgstr "اخبار عمومی"
+
+#: books/templates/books/home.html:30 news/templates/news/news_list.html:27
+msgid "Staff news"
+msgstr "اخبار تیم"
+
+#: books/templates/books/home.html:44 news/templates/news/news_list.html:41
+#| msgid "Admin Panel"
+msgid "Admin news"
+msgstr "اخبار مدیریتی"
 
 #: books/templates/books/illustrator_detail.html:9
 msgid "Illustrator Details"
@@ -733,7 +753,8 @@ msgstr "نکته"
 msgid ""
 "All of the book details which is related to this ISBN will be removed "
 "permanently"
-msgstr "تمام اطلاعات کتاب که به این ISBN مرتبط باشد به صورت دائمی حذف خواهد شد"
+msgstr ""
+"تمام اطلاعات کتاب که به این ISBN مرتبط باشد به صورت دائمی حذف خواهد شد"
 
 #: books/templates/books/isbn_confirm_delete.html:18
 msgid "Yes, delete."
@@ -754,11 +775,11 @@ msgstr "کد ISBN مهم‌ترین شناسه معرفی کتاب است "
 
 #: books/templates/books/isbn_form.html:15
 msgid ""
-"The structure of its 13-digits character xxx-xx-xxxx-xxx-x or the older 10-"
-"digits is xx-xxxx-xxx-x "
+"The structure of its 13-digits character xxx-xx-xxxx-xxx-x or the older "
+"10-digits is xx-xxxx-xxx-x "
 msgstr ""
-"ساختار این کد یک عدد ۱۳ رقمی به شکل xxx-xx-xxxx-xxx-x است مدل‌های قدیمی‌تر آن "
-"ترکیبی ۱۰ رقمی به این شکل xx-xxxx-xxx-x  دارند"
+"ساختار این کد یک عدد ۱۳ رقمی به شکل xxx-xx-xxxx-xxx-x است مدل‌های قدیمی‌تر "
+"آن ترکیبی ۱۰ رقمی به این شکل xx-xxxx-xxx-x  دارند"
 
 #: books/templates/books/isbn_form.html:16
 #: books/templates/books/isbn_update.html:14
@@ -766,16 +787,16 @@ msgid ""
 "If you do not know hoe to define an ISBN you should contanct the "
 "administration of Website"
 msgstr ""
-"اگر کتاب مورد نظر شما ISBN ندارد یا شما کد آن را نمی‌دانید حتماً با مدیر سایت "
-"تماس بگیرید"
+"اگر کتاب مورد نظر شما ISBN ندارد یا شما کد آن را نمی‌دانید حتماً با مدیر "
+"سایت تماس بگیرید"
 
 #: books/templates/books/isbn_update.html:13
 msgid ""
-"The structure of its 13-digits character xxx-xx-xxxx-xxx-x or the older 10-"
-"digits is xx-xxxx-xxx-x"
+"The structure of its 13-digits character xxx-xx-xxxx-xxx-x or the older "
+"10-digits is xx-xxxx-xxx-x"
 msgstr ""
-"ساختار این کد یک عدد ۱۳ رقمی به شکل xxx-xx-xxxx-xxx-x است مدل‌های قدیمی‌تر آن "
-"ترکیبی ۱۰ رقمی به این شکل xx-xxxx-xxx-x  دارند"
+"ساختار این کد یک عدد ۱۳ رقمی به شکل xxx-xx-xxxx-xxx-x است مدل‌های قدیمی‌تر "
+"آن ترکیبی ۱۰ رقمی به این شکل xx-xxxx-xxx-x  دارند"
 
 #: books/templates/books/isbn_update.html:20
 msgid "Update ISBN"
@@ -793,7 +814,8 @@ msgstr "اضافه کردن بازنگری"
 
 #: books/templates/books/shoora_form.html:12
 msgid "You can add a review for a book by selecting its ISBN"
-msgstr "شما می‌‌توانید با انتخاب یک ISBN یک بازنگری برای کتاب مرتبط با آن بسازید"
+msgstr ""
+"شما می‌‌توانید با انتخاب یک ISBN یک بازنگری برای کتاب مرتبط با آن بسازید"
 
 #: books/templates/books/shoora_list.html:8
 msgid "Shoora"
@@ -801,11 +823,12 @@ msgstr "شورا"
 
 #: books/templates/books/shoora_list.html:10
 msgid ""
-"Every year CBC reviewed published books for children and teenagers and these "
-"reviews publish for parents to help them for select the approriate books"
+"Every year CBC reviewed published books for children and teenagers and these"
+" reviews publish for parents to help them for select the approriate books"
 msgstr ""
 "هر سال شورای کتاب کودک، کتاب‌های منتشر شده برای کودکان و نوجوانان را بررسی "
-"کرده و این بازنگری‌ها را منتشر می‌کند تا به والدین برای انتخاب کتاب، کمک کند."
+"کرده و این بازنگری‌ها را منتشر می‌کند تا به والدین برای انتخاب کتاب، کمک "
+"کند."
 
 #: books/templates/books/shoora_list.html:15
 msgid "List of Shoora reviewed books"
@@ -827,7 +850,8 @@ msgstr "اضافه کردن مترجم"
 msgid ""
 "You can add a translator and then you could use it in a book registering"
 msgstr ""
-"شما می‌توانید یک مترجم ثبت کنید و در هنگام ثبت مشخصات کتاب از آن استفاده کنید"
+"شما می‌توانید یک مترجم ثبت کنید و در هنگام ثبت مشخصات کتاب از آن استفاده "
+"کنید"
 
 #: books/templates/books/translator_form.html:18
 #: books/templates/books/translator_list.html:11
@@ -838,13 +862,17 @@ msgstr "اضافه کردن مترجم"
 msgid "List of translators"
 msgstr "لیست مترجمان"
 
-#: ketab/settings.py:115
+#: ketab/settings.py:116
 msgid "English"
 msgstr "انگلیسی"
 
-#: ketab/settings.py:116
+#: ketab/settings.py:117
 msgid "Farsi"
 msgstr "فارسی"
+
+#: news/templates/news/news_detail.html:15
+msgid "Oops! There is nothing here for you, please check the "
+msgstr "اینجا خبری برای شما نیست لطفا بروید به "
 
 #~ msgid "Password reset"
 #~ msgstr "بازنشانی گذرواژه "
