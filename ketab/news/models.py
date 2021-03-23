@@ -16,5 +16,6 @@ class News(models.Model):
         return self.title
 
     class Meta:
-        ordering = ['-created_date'][:5]
+        ordering = ['-created_date']
+
 

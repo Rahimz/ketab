@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+
+{% block news_active %}active{% endblock %}
+
+{% block body %}
+{% if allowed %}
+<div>
+    <h2>{{ news.title }}</h2>
+    <p class="text-muted">{{ news.created_date }}</p>
+    <p>{{ news.description | safe }}</p>
+</div>
+{% else %}
+<p class="lead">{% trans 'Oops! There is nothing here for you, please check the '%}<a href="{% url 'news:news_list' %}">{% trans 'News' %}</a>!</p>
+{% endif %}
+{% endblock %}

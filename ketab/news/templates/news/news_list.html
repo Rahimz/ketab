@@ -1,14 +1,11 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 
 {% load i18n %}
 
-{% block home_active %}active{% endblock %}
-
-{% block title %}{% trans 'Home Pgae' %}{% endblock %}
+{% block news_active %}active{% endblock %}
 
 {% block body %}
-
-<p>{% blocktrans with name=request.user %}Hello {{ name }}!{% endblocktrans %}</p>
+<h2>{% trans 'News' %}</h2>
 
 {%if public_news %}
 <div class="row">
@@ -16,7 +13,7 @@
 </div>
 {% for new in public_news %}
 <div class="row">
-    <p class="h3 text-primary">{{ new.title }}</p>
+    <p class="h3 text-primary"><a href="{% url 'news:news_detail' new.pk %}">{{ new.title }}</a></p>
     <p class="bg-light">{{ new.description | truncatewords:10 }}</p>
 
 </div>
@@ -31,7 +28,7 @@
 </div>
 {% for new in staff_news %}
 <div class="row">
-    <p class="h3 text-primary">{{ new.title }}</p>
+    <p class="h3 text-primary"><a href="{% url 'news:news_detail' new.pk %}">{{ new.title }}</a></p>
     <p class="bg-light">{{ new.description | truncatewords:10 }}</p>
 </div>
 {% endfor %}
@@ -45,7 +42,7 @@
 </div>
 {% for new in admin_news %}
 <div class="row">
-    <p class="h3 text-primary">{{ new.title }}</p>
+    <p class="h3 text-primary"><a href="{% url 'news:news_detail' new.pk %}">{{ new.title }}</a></p>
     <p class="bg-light">{{ new.description | truncatewords:10 }}</p>
 </div>
 {% endfor %}

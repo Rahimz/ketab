@@ -9,9 +9,9 @@ from .forms import IsbnFormUpdate, BookFormUpdate
 
 
 def home(request):
-    public_news = News.objects.filter(category='public')
-    staff_news = News.objects.filter(category='staff')
-    admin_news = News.objects.filter(category='admin')
+    public_news = News.objects.filter(category='public')[:3]
+    staff_news = News.objects.filter(category='staff')[:3]
+    admin_news = News.objects.filter(category='admin')[:3]
     return render(request,
                   'books/home.html',
                   {'public_news': public_news,

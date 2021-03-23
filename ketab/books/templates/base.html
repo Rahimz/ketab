@@ -48,6 +48,10 @@
                         <a class="nav-link {% block collection_active %}{% endblock %}"
                            href="{% url 'collectionlist' %}">{% trans 'Collections' %}</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% block news_active %}{% endblock %}"
+                           href="{% url 'news:news_list' %}">{% trans 'News' %}</a>
+                    </li>
 
                     {# The Admin part of navbar #} {% if request.user.is_superuser %}
                     <li class="nav-item"><a class="nav-link" href="{% url 'admin:index' %}">{% trans 'Admin' %}</a></li>
