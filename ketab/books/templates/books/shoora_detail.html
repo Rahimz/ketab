@@ -16,7 +16,7 @@
     <p>{% trans 'Property' %}: {{ shoora.property }}</p>
     <p>{% trans 'Satiric' %}: {{ shoora.satiric }}</p>
     <p>{% trans 'Main character' %} {{ shoora.main_character }}</p>
-    <p>{% trans 'Main character description' %} {{ shoora.main_character_description }}</p>
+    <p>{% trans 'Main character description' %} {{ shoora.main_character_description | safe }}</p>
     <p>{% trans 'Point of view' %} {{ shoora.pov }}</p>
     <p>{% trans 'Events place' %} {{ shoora.events_place }}</p>
     <p>{% trans 'Child special need' %} {{ shoora.child_special_need }}</p>
