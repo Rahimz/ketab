@@ -9,6 +9,12 @@ class ISBN(models.Model):
     def get_absolute_url(self):
         return reverse('isbn_detail', args=[self.pk])
 
+    # TODO: I want to make a method which is make possible if I give an ISBN it return the book related to it
+    # but this method does not work
+    # def get_book_from_isbn(self):
+    #     book = Book(isbn=super().get_object())
+    #     return book.name
+
     def __str__(self):
         return str(self.code)
 

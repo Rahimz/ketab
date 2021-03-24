@@ -13,6 +13,25 @@
 <ul>
     {% for isbn in object_list %}
     <li><a href="{% url 'isbn_detail' isbn.code %}">{{ isbn.code }}</a></li>
-    {% endfor %}
+    {{ isbn.get_book_from_isbn }} {% endfor %}
+    <hr/>
 </ul>
+<h3>{% trans 'The ISBNs which have a book' %}</h3>
+<table class="table">
+    <thead>
+    <tr>
+    <td>{% trans 'ISBN' %}</td>
+    <td>{% trans 'Book' %}</td>
+    </tr>
+    </thead>
+    <tbody>
+    {% for book in book_list %}
+    <tr>
+        <td><a href="{% url 'isbn_detail' book.isbn.code %}">{{ book.isbn }}</a></td>
+        <td><a href="{{ book.get_absolute_url }}">{{ book.name}}</a></td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
 {% endblock %}
