@@ -51,7 +51,11 @@ class Illustrator(models.Model):
 
 
 class Publisher(models.Model):
-    name = models.CharField(max_length=1500)
+    name = models.CharField(max_length=500)
+    address = models.CharField(max_length=1500,
+                               blank=True, null=True)
+    phone = models.IntegerField(blank=True, null=True)
+
 
     class Meta:
         ordering = ['name']
