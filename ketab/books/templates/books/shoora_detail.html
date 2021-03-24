@@ -9,9 +9,30 @@
     <h2>{% trans 'Shoora Book Details' %}</h2>
     <h3>{{ book.name }}</h3>
     <p>{% trans 'ISBN' %}: {{ shoora.isbn }}</p>
+    <p>{% trans 'Book group' %}: {{ shoora.book_group }}</p>
     <p>{% trans 'Subject' %}: {{ shoora.subject }}</p>
     <p>{% trans 'Category' %}: {{ shoora.category }}</p>
-    <h3>{% trans 'Main character' %} {{ shoora.main_character }}</h3>
+    <p>{% trans 'Function' %}: {{ shoora.function }}</p>
+    <p>{% trans 'Property' %}: {{ shoora.property }}</p>
+    <p>{% trans 'Satiric' %}: {{ shoora.satiric }}</p>
+    <p>{% trans 'Main character' %} {{ shoora.main_character }}</p>
+    <p>{% trans 'Main character description' %} {{ shoora.main_character_description }}</p>
+    <p>{% trans 'Point of view' %} {{ shoora.pov }}</p>
+    <p>{% trans 'Events place' %} {{ shoora.events_place }}</p>
+    <p>{% trans 'Child special need' %} {{ shoora.child_special_need }}</p>
+    <p>{% trans 'Genre' %} {{ shoora.genre }}</p>
+    <p>{% trans 'Genre description' %} {{ shoora.genre_description }}</p>
+    <p>{% trans 'Age from' %} {{ shoora.age_from }}</p>
+    <p>{% trans 'Age to' %} {{ shoora.age_to }}</p>
+    <p>{% trans 'Position' %} {{ shoora.position }}</p>
+    <p>{% trans 'Book latin name' %} {{ shoora.book_latin_name }}</p>
+    <p>{% trans 'Author latin name' %} {{ shoora.author_latin_name }}</p>
+    <p>{% trans 'Language' %} {{ shoora.language }}</p>
+    <p>{% trans 'Nationality' %} {{ shoora.nationality }}</p>
+    <p>{% trans 'Score' %} {{ shoora.score }}</p>
+    <p>{% trans 'Other translation' %} {{ shoora.other_translation }}</p>
+    <p>{% trans 'Copyright' %} {{ shoora.copyright }}</p>
+
 
 </div>
 {% endblock %}
