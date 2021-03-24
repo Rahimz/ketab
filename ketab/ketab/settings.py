@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'books.apps.BooksConfig',
     'news.apps.NewsConfig',
     'rosetta',
+    'ckeditor',
 ]
 
 MIDDLEWARE = [

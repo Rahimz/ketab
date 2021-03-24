@@ -1,5 +1,6 @@
 from django.db import models
-from django.urls import reverse 
+from django.urls import reverse
+from ckeditor.fields import RichTextField
 
 
 class ISBN(models.Model):
@@ -180,7 +181,7 @@ class Book(models.Model):
   
 class Critique(models.Model): 
     author = models.CharField(max_length=1500,)
-    content = models.TextField()
+    content = RichTextField()
     book = models.ForeignKey(Book,
                              on_delete=models.CASCADE,
                              related_name='critique')
@@ -234,7 +235,7 @@ class Shoora(models.Model):
                                                ('animal', 'Animal'),
                                                ('other', 'Other')],
                                       default='human')
-    main_character_description = models.TextField(blank=True, null=True)
+    main_character_description = RichTextField(blank=True, null=True)
     pov = models.CharField(max_length=1500,
                            blank=True, null=True,
                            verbose_name='Point of view')
@@ -279,7 +280,7 @@ class Shoora(models.Model):
 
 class Content(models.Model):
     author = models.CharField(max_length=500,)
-    description = models.TextField()
+    description = RichTextField()
     book = models.ForeignKey(Shoora,
                              on_delete=models.CASCADE,
                              related_name='content')
