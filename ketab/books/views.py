@@ -3,7 +3,7 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic import ListView, DetailView
 from django.urls import reverse_lazy
 from django.http import HttpResponse
-from .models import Book, Author, Translator, Critique, Collection, ISBN, Market, Shoora, Illustrator
+from .models import Book, Author, Translator, Critique, Collection, ISBN, Market, Shoora, Illustrator, Publisher
 from news.models import News
 from .forms import IsbnFormUpdate, BookFormUpdate
 
@@ -261,3 +261,24 @@ class ShooraCreate(CreateView):
     model = Shoora
     fields = '__all__'
     success_url = reverse_lazy('shoora_list')
+
+
+# Publisger Views
+class PublisherList(ListView):
+    model = Publisher
+
+
+class PublisherCreate(CreateView):
+    model = Publisher
+    fields = '__all__'
+    success_url = reverse_lazy('publisher_list')
+
+
+def PublisherDetail(request, pk):
+    publisher = get_object_or_404(Publisher,
+                                  pk=pk)
+    books = Book.objects.filter(publisher=publisher.pk)
+    return render(request,
+                  'books/publisher_detail.html',
+                  {'publisher': publisher,
+                   'books': books})

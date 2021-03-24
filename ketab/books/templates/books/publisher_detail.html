@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+
+{% block basic_active %}active{% endblock %}
+
+{% block body %}
+<div>
+    <h2>{% trans 'Publisher Details' %}</h2>
+    <p>{% trans 'Name' %}: {{ publisher.name }}</p>
+    <p>{% trans 'Address' %}: {{ publisher.address }}</p>
+    <p>{% trans 'Phone' %}: {{ publisher.phone }}</p>
+    <h3>{% trans 'Books of' %} {{ publisher.name }}</h3>
+    {% if books %}
+        <ul>
+        {% for book in books %}
+            <li><a href="{{ book.get_absolute_url }}">{{ book }}</a></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>{% trans 'There is not any book related to this publisher' %}.</p>
+    {% endif %}
+</div>
+{% endblock %}

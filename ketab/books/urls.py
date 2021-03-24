@@ -22,18 +22,21 @@ urlpatterns = [
 
     path('authors/', views.AuthorList.as_view(), name='author_list'),
     path('authors/create/', views.AuthorCreate.as_view(), name='author_create'),
-    path('authors/<int:pk>', views.AuthorDetail, name='author_detail'),
+    path('authors/<int:pk>/', views.AuthorDetail, name='author_detail'),
 
     path('translators/', views.TranslatorList.as_view(), name='translator_list'),
     path('translators/create/', views.TranslatorCreate.as_view(), name='translator_create'),
-    path('translators/<int:pk>', views.TranslatorDetail, name='translator_detail'),
+    path('translators/<int:pk>/', views.TranslatorDetail, name='translator_detail'),
 
     path('illustrator/', views.IllustratorList.as_view(), name='illustrator_list'),
     path('illustrator/create/', views.IllustratorCreate.as_view(), name='illustrator_create'),
-    path('illustrator/<int:pk>', views.IllustratorDetail, name='illustrator_detail'),
+    path('illustrator/<int:pk>/', views.IllustratorDetail, name='illustrator_detail'),
 
     path('shoora/', views.ShooraList.as_view(), name='shoora_list'),
     path('shoora/<int:pk>/', views.ShooraDetail, name='shoora_detail'),
     path('shoora/create/', views.ShooraCreate.as_view(), name='shoora_create'),
 
+    path('publisher/', views.PublisherList.as_view(), name='publisher_list'),
+    path('publisher/create/', views.PublisherCreate.as_view(), name='publisher_create'),
+    path('publisher/<int:pk>', views.PublisherDetail, name='publisher_detail'),
     ]

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-23 14:20+0430\n"
+"POT-Creation-Date: 2021-03-24 14:40+0430\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -285,6 +285,7 @@ msgid "Logout"
 msgstr ""
 
 #: books/templates/base.html:77 books/templates/books/book_detail.html:87
+#: books/templates/books/shoora_detail.html:30
 msgid "Language"
 msgstr ""
 
@@ -293,6 +294,7 @@ msgid "Admin Panel"
 msgstr ""
 
 #: books/templates/base.html:115 books/templates/books/book_detail.html:16
+#: books/templates/books/isbn_list.html:23
 #: books/templates/books/shoora_detail.html:11
 msgid "ISBN"
 msgstr ""
@@ -323,6 +325,7 @@ msgid "Ilustrators"
 msgstr ""
 
 #: books/templates/base.html:150 books/templates/books/book_detail.html:28
+#: books/templates/books/publisher_list.html:8
 msgid "Publisher"
 msgstr ""
 
@@ -378,6 +381,7 @@ msgstr ""
 #: books/templates/books/book_detail.html:15
 #: books/templates/books/collection_detail.html:11
 #: books/templates/books/illustrator_detail.html:10
+#: books/templates/books/publisher_detail.html:10
 #: books/templates/books/translator_detail.html:10
 msgid "Name"
 msgstr ""
@@ -391,12 +395,14 @@ msgstr ""
 #: books/templates/books/author_detail.html:12
 #: books/templates/books/book_detail.html:88
 #: books/templates/books/illustrator_detail.html:12
+#: books/templates/books/shoora_detail.html:31
 #: books/templates/books/translator_detail.html:12
 msgid "Nationality"
 msgstr ""
 
 #: books/templates/books/author_detail.html:13
 #: books/templates/books/illustrator_detail.html:13
+#: books/templates/books/publisher_detail.html:13
 #: books/templates/books/translator_detail.html:13
 msgid "Books of"
 msgstr ""
@@ -506,6 +512,7 @@ msgstr ""
 
 #: books/templates/books/book_detail.html:37
 #: books/templates/books/book_detail.html:81
+#: books/templates/books/shoora_detail.html:23
 msgid "Genre"
 msgstr ""
 
@@ -562,29 +569,32 @@ msgid "Shoora info"
 msgstr ""
 
 #: books/templates/books/book_detail.html:72
+#: books/templates/books/shoora_detail.html:12
 msgid "Book group"
 msgstr ""
 
 #: books/templates/books/book_detail.html:73
-#: books/templates/books/shoora_detail.html:12
+#: books/templates/books/shoora_detail.html:13
 msgid "Subject"
 msgstr ""
 
 #: books/templates/books/book_detail.html:74
-#: books/templates/books/shoora_detail.html:13
+#: books/templates/books/shoora_detail.html:14
 msgid "Category"
 msgstr ""
 
 #: books/templates/books/book_detail.html:75
+#: books/templates/books/shoora_detail.html:17
 msgid "Satiric"
 msgstr ""
 
 #: books/templates/books/book_detail.html:76
-#: books/templates/books/shoora_detail.html:14
+#: books/templates/books/shoora_detail.html:18
 msgid "Main character"
 msgstr ""
 
 #: books/templates/books/book_detail.html:77
+#: books/templates/books/shoora_detail.html:19
 msgid "Main character description"
 msgstr ""
 
@@ -597,6 +607,7 @@ msgid "Events_place"
 msgstr ""
 
 #: books/templates/books/book_detail.html:80
+#: books/templates/books/shoora_detail.html:22
 msgid "Child special need"
 msgstr ""
 
@@ -609,18 +620,22 @@ msgid "Age Range"
 msgstr ""
 
 #: books/templates/books/book_detail.html:84
+#: books/templates/books/shoora_detail.html:27
 msgid "Position"
 msgstr ""
 
 #: books/templates/books/book_detail.html:85
+#: books/templates/books/shoora_detail.html:28
 msgid "Book latin name"
 msgstr ""
 
 #: books/templates/books/book_detail.html:86
+#: books/templates/books/shoora_detail.html:29
 msgid "Author latin name"
 msgstr ""
 
 #: books/templates/books/book_detail.html:89
+#: books/templates/books/shoora_detail.html:32
 msgid "Score"
 msgstr ""
 
@@ -770,6 +785,14 @@ msgid ""
 "administration of Website"
 msgstr ""
 
+#: books/templates/books/isbn_list.html:19
+msgid "The ISBNs which have a book"
+msgstr ""
+
+#: books/templates/books/isbn_list.html:24
+msgid "Book"
+msgstr ""
+
 #: books/templates/books/isbn_update.html:13
 msgid ""
 "The structure of its 13-digits character xxx-xx-xxxx-xxx-x or the older 10-"
@@ -780,17 +803,83 @@ msgstr ""
 msgid "Update ISBN"
 msgstr ""
 
+#: books/templates/books/publisher_detail.html:9
+msgid "Publisher Details"
+msgstr ""
+
+#: books/templates/books/publisher_detail.html:11
+msgid "Address"
+msgstr ""
+
+#: books/templates/books/publisher_detail.html:12
+msgid "Phone"
+msgstr ""
+
+#: books/templates/books/publisher_detail.html:21
+msgid "There is not any book related to this publisher"
+msgstr ""
+
+#: books/templates/books/publisher_form.html:8
+#: books/templates/books/publisher_form.html:18
+#: books/templates/books/publisher_list.html:11
+msgid "Add publisher"
+msgstr ""
+
+#: books/templates/books/publisher_form.html:12
+msgid "You can add a publisher and then you could use it in a book registering"
+msgstr ""
+
+#: books/templates/books/publisher_list.html:14
+msgid "List of publishers"
+msgstr ""
+
 #: books/templates/books/shoora_detail.html:9
 msgid "Shoora Book Details"
 msgstr ""
 
-#: books/templates/books/shoora_form.html:8
-#: books/templates/books/shoora_form.html:18
+#: books/templates/books/shoora_detail.html:15
+msgid "Function"
+msgstr ""
+
+#: books/templates/books/shoora_detail.html:16
+msgid "Property"
+msgstr ""
+
+#: books/templates/books/shoora_detail.html:20
+msgid "Point of view"
+msgstr ""
+
+#: books/templates/books/shoora_detail.html:21
+msgid "Events place"
+msgstr ""
+
+#: books/templates/books/shoora_detail.html:24
+msgid "Genre description"
+msgstr ""
+
+#: books/templates/books/shoora_detail.html:25
+msgid "Age from"
+msgstr ""
+
+#: books/templates/books/shoora_detail.html:26
+msgid "Age to"
+msgstr ""
+
+#: books/templates/books/shoora_detail.html:33
+msgid "Other translation"
+msgstr ""
+
+#: books/templates/books/shoora_detail.html:34
+msgid "Copyright"
+msgstr ""
+
+#: books/templates/books/shoora_form.html:10
+#: books/templates/books/shoora_form.html:20
 #: books/templates/books/shoora_list.html:12
 msgid "Add review"
 msgstr ""
 
-#: books/templates/books/shoora_form.html:12
+#: books/templates/books/shoora_form.html:14
 msgid "You can add a review for a book by selecting its ISBN"
 msgstr ""
 
@@ -834,11 +923,11 @@ msgstr ""
 msgid "List of translators"
 msgstr ""
 
-#: ketab/settings.py:116
+#: ketab/settings.py:117
 msgid "English"
 msgstr ""
 
-#: ketab/settings.py:117
+#: ketab/settings.py:118
 msgid "Farsi"
 msgstr ""
 
